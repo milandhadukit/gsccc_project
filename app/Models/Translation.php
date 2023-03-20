@@ -13,6 +13,6 @@ class Translation extends LanguageLine
 {
     use HasApiTokens, HasFactory;
 
-    protected $table    = 'translation';
+    protected $table      = 'translation';
     public    $timestamps = true;
 }
