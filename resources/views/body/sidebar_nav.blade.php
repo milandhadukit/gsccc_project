@@ -159,7 +159,7 @@
                         <ul class="pcoded-submenu">
 
                             <li class=" ">
-                                <a href="{{url('add-menu')}}">
+                                <a href="{{route('menus.add')}}">
                                     <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
                                     <span class="pcoded-mtext" data-i18n="nav.basic-components.alert">Add Menu</span>
                                     <span class="pcoded-mcaret"></span>

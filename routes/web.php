@@ -25,7 +25,8 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::group(['middleware' => ['auth']], function () { 
-    Route::get('add-menu', [MenusController::class,'AddMenus']);
-    Route::post('save-user', 'UserController@saveUser');
-    Route::put('edit-user', 'UserController@editUser');
+    Route::get('add-menu', [MenusController::class,'AddMenus'])->name('menus.add');
+    Route::post('store-menu', [MenusController::class,'storeMenus'])->name('menus.store');
+   
+   
 });
