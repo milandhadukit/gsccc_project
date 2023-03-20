@@ -20,7 +20,7 @@
 
 
     <!-- Required Fremwork -->
-    {{-- <link rel="stylesheet" type="text/css" href="assets/css/bootstrap/css/bootstrap.min.css"> --}}
+
     <link href="{{ URL::asset('assets/css/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
 
     <!-- themify-icons line icon -->
@@ -33,10 +33,9 @@
     <!-- Style.css -->
     {{-- <link rel="stylesheet" type="text/css" href="assets/css/style.css"> --}}
     <link href="{{ URL::asset('assets/css/style.css') }}" rel="stylesheet" type="text/css" />
-    {{-- <link rel="stylesheet" type="text/css" href="assets/css/jquery.mCustomScrollbar.css"> --}}
+
     <link href="{{ URL::asset('assets/css/jquery.mCustomScrollbar.css') }}" rel="stylesheet" type="text/css" />
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
-        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+
     {{-- <link href="{{ URL::asset('assets/css/style.css'); }}" rel="stylesheet" />
       <script src="{{ asset('assets/plugins/jquery-1.10.2.js')}}"></script> --}}
     <title>gsccc</title>
@@ -166,6 +165,12 @@
 <script src="assets/js/demo-12.js"></script>
 <script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
 
+
+<!-- summer note editor -->
+
+
+
+
 <script>
     var $window = $(window);
     var nav = $('.fixed-button');
@@ -178,6 +183,14 @@
     });
 </script>
 
+
+
+
+<script type="text/javascript">
+    $(document).ready(function() {
+      $('.summernote').summernote();
+    });
+</script>
 
 </body>
 
