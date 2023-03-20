@@ -8,10 +8,10 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Spatie\TranslationLoader\LanguageLine;
 use Laravel\Sanctum\HasApiTokens;
 
-class Translation extends LanguageLine
+class Translation 
 {
     use HasApiTokens, HasFactory;
 
-    protected $table      = 'translation';
+    protected $table    = 'translation';
     public    $timestamps = true;
 }
