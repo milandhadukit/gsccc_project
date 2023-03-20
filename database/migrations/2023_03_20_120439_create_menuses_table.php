@@ -21,7 +21,7 @@ return new class extends Migration
             $table->text('description_gu')->nullable();
             $table->integer('parent_id')->default(0);
             $table->string('slug')->nullable();
-            $table->enum('status', ['1', '0', '-1'])->default(1);
+            $table->tinyInteger('status')->default(1)->comment('(0 = inactive and 1 = active)');
             $table->bigInteger('user_id')->nullable();
             $table->timestamps();
         });
