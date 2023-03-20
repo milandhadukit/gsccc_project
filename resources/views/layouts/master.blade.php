@@ -20,7 +20,7 @@
 
 
     <!-- Required Fremwork -->
-   
+
     <link href="{{ URL::asset('assets/css/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
 
     <!-- themify-icons line icon -->
@@ -33,10 +33,11 @@
     <!-- Style.css -->
     {{-- <link rel="stylesheet" type="text/css" href="assets/css/style.css"> --}}
     <link href="{{ URL::asset('assets/css/style.css') }}" rel="stylesheet" type="text/css" />
-   
+
     <link href="{{ URL::asset('assets/css/jquery.mCustomScrollbar.css') }}" rel="stylesheet" type="text/css" />
 
-   
+    {{-- <link href="{{ URL::asset('assets/css/style.css'); }}" rel="stylesheet" />
+      <script src="{{ asset('assets/plugins/jquery-1.10.2.js')}}"></script> --}}
     <title>gsccc</title>
 </head>
 
@@ -105,7 +106,13 @@
     </div>
     </div>
     </div>
-
+    <script type="text/javascript">
+        var url = "{{ route('LangChange') }}";
+        $(".changeLang").on("change", function() {
+            alert($(this).val());
+            window.location.href = url + "?lang=" + $(this).val();
+        });
+    </script>
 
 
 </body>

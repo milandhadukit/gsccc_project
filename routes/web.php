@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\V1\Admin\Localization;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\V1\Admin\MenusController;
@@ -23,9 +24,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Route::group(['middleware' => ['auth']], function () { 
-    Route::get('add-menu', [MenusController::class,'AddMenus']);
+Route::get('language', [Localization::class, "lang_change"])->name('LangChange');
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('add-menu', [MenusController::class, 'AddMenus']);
     Route::post('save-user', 'UserController@saveUser');
     Route::put('edit-user', 'UserController@editUser');
 });
