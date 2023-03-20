@@ -104,14 +104,14 @@
                                     <i class="ti-layout-sidebar-left"></i> Logout
                                 </a> --}}
                                 <a class="dropdown-item" href="{{ route('logout') }}"
-                                    onclick="event.preventDefault();
+                                onclick="event.preventDefault();
                                               document.getElementById('logout-form').submit();">
-                                    {{ __('Logout') }}
-                                </a>
+                                 {{ __('Logout') }}
+                             </a>
 
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                    @csrf
-                                </form>
+                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                 @csrf
+                             </form>
 
 
 
@@ -159,7 +159,7 @@
                         <ul class="pcoded-submenu">
 
                             <li class=" ">
-                                <a href="{{ url('add-menu') }}">
+                                <a href="{{url('add-menu')}}">
                                     <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
                                     <span class="pcoded-mtext" data-i18n="nav.basic-components.alert">Add Menu</span>
                                     <span class="pcoded-mcaret"></span>
@@ -238,19 +238,18 @@
                         <ul class="pcoded-submenu">
                             <li class="">
                                 <a href="{{ route('logout') }}"
-                                    onclick="event.preventDefault();
+                                onclick="event.preventDefault();
                                               document.getElementById('logout-form').submit();">
-                                    {{-- {{ __('Logout') }}> --}}
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST"
-                                        class="d-none">
-                                        @csrf
-                                    </form>
+                                 {{-- {{ __('Logout') }}> --}}
+                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
                                     <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
                                     <span class="pcoded-mtext" data-i18n="nav.menu-levels.menu-level-21">Logout</span>
                                     <span class="pcoded-mcaret"></span>
                                 </a>
                             </li>
-
+                            
                             <li class="">
                                 <a href="javascript:void(0)">
                                     <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
