@@ -48,7 +48,7 @@
                 <li class="user-profile header-notification">
                     <a href="#!">
                         {{-- <img src="assets/images/avatar-4.jpg" class="img-radius" alt="User-Profile-Image"> --}}
-                        <span>John Doe</span>
+                        <span>{{ Auth::user()->name }}</span>
                         <i class="ti-angle-down"></i>
                     </a>
                     <ul class="show-notification profile-notification">
@@ -100,9 +100,21 @@
 
 
                             <li>
-                                <a href="auth-normal-sign-in.html">
+                                {{-- <a href="{{route('logout')}}">
                                     <i class="ti-layout-sidebar-left"></i> Logout
-                                </a>
+                                </a> --}}
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                onclick="event.preventDefault();
+                                              document.getElementById('logout-form').submit();">
+                                 {{ __('Logout') }}
+                             </a>
+
+                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                 @csrf
+                             </form>
+
+
+
                             </li>
                         </ul>
                 </li>
@@ -153,9 +165,6 @@
                                     <span class="pcoded-mcaret"></span>
                                 </a>
                             </li>
-
-
-
 
 
                         </ul>
@@ -218,20 +227,25 @@
 
                 </ul>
 
-                <div class="pcoded-navigatio-lavel" data-i18n="nav.category.other">Others </div>
+                <div class="pcoded-navigatio-lavel" data-i18n="nav.category.other">Others Setting</div>
                 <ul class="pcoded-item pcoded-left-item">
                     <li class="pcoded-hasmenu ">
                         <a href="javascript:void(0)">
                             <span class="pcoded-micon"><i class="ti-direction-alt"></i><b>M</b></span>
-                            <span class="pcoded-mtext" data-i18n="nav.menu-levels.main">Select Others</span>
+                            <span class="pcoded-mtext" data-i18n="nav.menu-levels.main">Setting</span>
                             <span class="pcoded-mcaret"></span>
                         </a>
                         <ul class="pcoded-submenu">
                             <li class="">
-                                <a href="javascript:void(0)">
+                                <a href="{{ route('logout') }}"
+                                onclick="event.preventDefault();
+                                              document.getElementById('logout-form').submit();">
+                                 {{-- {{ __('Logout') }}> --}}
+                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
                                     <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
-                                    <span class="pcoded-mtext" data-i18n="nav.menu-levels.menu-level-21">Menu Level
-                                        2.1</span>
+                                    <span class="pcoded-mtext" data-i18n="nav.menu-levels.menu-level-21">Logout</span>
                                     <span class="pcoded-mcaret"></span>
                                 </a>
                             </li>

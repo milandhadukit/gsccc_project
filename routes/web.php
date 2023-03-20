@@ -15,8 +15,12 @@ use Illuminate\Support\Facades\Auth;
 */
 
 Route::get('/', function () {
-    return view('pages.Deshboard');
+    return view('auth.login');
 });
+
+// Route::get('/', function () {
+//     return view('pages.Deshboard');
+// });
 
 
 
