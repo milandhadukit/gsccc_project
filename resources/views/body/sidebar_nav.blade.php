@@ -141,7 +141,7 @@
                     </div>
                 </div>
 
-                <div class="pcoded-navigatio-lavel" data-i18n="nav.category.navigation">Layout</div>
+                <div class="pcoded-navigatio-lavel" data-i18n="nav.category.navigation">Menus</div>
                 <ul class="pcoded-item pcoded-left-item">
                     <li class="active">
                         <a href="index.html">
@@ -153,7 +153,7 @@
                     <li class="pcoded-hasmenu">
                         <a href="javascript:void(0)">
                             <span class="pcoded-micon"><i class="ti-layout-grid2-alt"></i></span>
-                            <span class="pcoded-mtext" data-i18n="nav.basic-components.main">Components</span>
+                            <span class="pcoded-mtext" data-i18n="nav.basic-components.main">Manage Pages</span>
                             <span class="pcoded-mcaret"></span>
                         </a>
                         <ul class="pcoded-submenu">
@@ -161,7 +161,7 @@
                             <li class=" ">
                                 <a href="button.html">
                                     <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
-                                    <span class="pcoded-mtext" data-i18n="nav.basic-components.alert">Button</span>
+                                    <span class="pcoded-mtext" data-i18n="nav.basic-components.alert">Add Menu</span>
                                     <span class="pcoded-mcaret"></span>
                                 </a>
                             </li>
