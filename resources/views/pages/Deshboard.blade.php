@@ -64,7 +64,9 @@
                                 <div class="card widget-card-1">
                                     <div class="card-block-small">
                                         <i class="icofont icofont-social-twitter bg-c-yellow card1-icon"></i>
-                                        <span class="text-c-yellow f-w-600">Followers</span>
+                                        <span class="text-c-yellow f-w-600"> @php
+                                            echo trans('test.test');
+                                        @endphp</span>
                                         <h4>+562</h4>
                                         <div>
                                             <span class="f-left m-t-10 text-muted">

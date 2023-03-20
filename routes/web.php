@@ -22,16 +22,16 @@ Route::get('/', function () {
 
 
 Auth::routes();
+Route::get('test', function () {
 
+    // echo "Cakked";
+});
+Route::get('lang/{lang}', [Localization::class, 'change'])->name('locale.change');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::group(['middleware' => ['auth']], function () { 
-    Route::get('add-menu', [MenusController::class,'AddMenus'])->name('menus.add');
-    Route::post('store-menu', [MenusController::class,'storeMenus'])->name('menus.store');
-   
-   
-});
+
 Route::get('language', [Localization::class, "lang_change"])->name('LangChange');
+
 Route::group(['middleware' => ['auth']], function () {
     Route::get('add-menu', [MenusController::class, 'AddMenus']);
     Route::post('save-user', 'UserController@saveUser');
