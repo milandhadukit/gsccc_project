@@ -37,6 +37,8 @@
     <link href="{{ URL::asset('assets/css/jquery.mCustomScrollbar.css') }}" rel="stylesheet" type="text/css" />
 
 
+    {{-- <link href="{{ URL::asset('assets/css/style.css'); }}" rel="stylesheet" />
+      <script src="{{ asset('assets/plugins/jquery-1.10.2.js')}}"></script> --}}
     <title>gsccc</title>
 </head>
 
@@ -94,7 +96,13 @@
 
     </div>
     </div>
-
+    <script type="text/javascript">
+        var url = "{{ route('LangChange') }}";
+        $(".changeLang").on("change", function() {
+            alert($(this).val());
+            window.location.href = url + "?lang=" + $(this).val();
+        });
+    </script>
 
     <!-- Required Jquery -->
     <script type="text/javascript" src="assets/js/jquery-ui/jquery-ui.min.js"></script>

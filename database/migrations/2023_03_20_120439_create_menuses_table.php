@@ -24,6 +24,7 @@ return new class extends Migration
             $table->string('slug_hi')->nullable();
             $table->string('slug_gu')->nullable();
             $table->tinyInteger('status')->default(1)->comment('(0 = inactive and 1 = active)');
+            $table->string('slug')->nullable();
             $table->bigInteger('user_id')->nullable();
             $table->timestamps();
         });

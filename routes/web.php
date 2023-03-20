@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\V1\Admin\Localization;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\V1\Admin\MenusController;
@@ -29,4 +30,10 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('store-menu', [MenusController::class,'storeMenus'])->name('menus.store');
    
    
+});
+Route::get('language', [Localization::class, "lang_change"])->name('LangChange');
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('add-menu', [MenusController::class, 'AddMenus']);
+    Route::post('save-user', 'UserController@saveUser');
+    Route::put('edit-user', 'UserController@editUser');
 });
