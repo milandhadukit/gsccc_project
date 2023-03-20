@@ -4,6 +4,7 @@ use App\Http\Controllers\V1\Admin\Localization;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\V1\Admin\MenusController;
+use App\Models\Translation;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,7 +24,14 @@ Route::get('/', function () {
 
 Auth::routes();
 Route::get('test', function () {
+    // use Spatie\TranslationLoader\LanguageLine;
 
+    // Translation::create([
+    //    'group' => 'test',
+    //    'key' => 'test',
+    //    'text' => ['en' => 'This is a required field', 'sp' => 'Dit is een zzxz','fr' => 'Dit is een verplicht veld'],
+    // ]);
+    // echo "calle";
     // echo "Cakked";
 });
 Route::get('lang/{lang}', [Localization::class, 'change'])->name('locale.change');
