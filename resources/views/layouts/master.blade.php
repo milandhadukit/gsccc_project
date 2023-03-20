@@ -35,7 +35,8 @@
     <link href="{{ URL::asset('assets/css/style.css') }}" rel="stylesheet" type="text/css" />
 
     <link href="{{ URL::asset('assets/css/jquery.mCustomScrollbar.css') }}" rel="stylesheet" type="text/css" />
-
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
     {{-- <link href="{{ URL::asset('assets/css/style.css'); }}" rel="stylesheet" />
       <script src="{{ asset('assets/plugins/jquery-1.10.2.js')}}"></script> --}}
     <title>gsccc</title>
@@ -103,16 +104,17 @@
         <a href="https://codedthemes.com/item/guru-able-admin-template/" target="_blank" class="btn btn-md btn-primary">
             <i class="fa fa-shopping-cart" aria-hidden="true"></i> Upgrade To Pro
         </a>
+
     </div>
     </div>
     </div>
     <script type="text/javascript">
-        var url = "{{ route('LangChange') }}";
-        $(".changeLang").on("change", function() {
-            alert($(this).val());
-            window.location.href = url + "?lang=" + $(this).val();
+        var url = "{{ url('lang') }}";
+        $(".changeLang").on('change', function() {
+            window.location.href = url + "/" + $(this).val();
         });
     </script>
+
 
 
 </body>
@@ -188,7 +190,7 @@
 
 <script type="text/javascript">
     $(document).ready(function() {
-      $('.summernote').summernote();
+        $('.summernote').summernote();
     });
 </script>
 
