@@ -25,6 +25,12 @@
                             </div>
 
 
+                            <div class="form-group">
+                              <label for="exampleInputEmail1">Enter Descreption English</label>
+                              <textarea class="summernote" name="description"></textarea>
+                          </div>
+
+
 
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </form>
@@ -36,4 +42,5 @@
             </div>
         </div>
     </div>
+    
 @endsection
