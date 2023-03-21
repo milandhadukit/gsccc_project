@@ -85,7 +85,7 @@
                 <ul class="pcoded-submenu">
 
                     <li class="pcoded-hasmenu ">
-                        <a href="{{ route('translate.add') }}">
+                        <a href="{{route('translate.list')}}">
                             <span class="pcoded-micon"><i class="ti-direction-alt"></i></span>
                             <span class="pcoded-mtext"
                                 data-i18n="nav.menu-levels.menu-level-22.main"><?php echo trans('menus.list_menu'); ?>
@@ -96,7 +96,7 @@
 
                     </li>
                     <li class="pcoded-hasmenu ">
-                        <a href="javascript:void(0)">
+                        <a href="{{ route('translate.add') }}">
                             <span class="pcoded-micon"><i class="ti-direction-alt"></i></span>
                             <span class="pcoded-mtext"
                                 data-i18n="nav.menu-levels.menu-level-22.main"><?php echo trans('menus.add_menu'); ?>
