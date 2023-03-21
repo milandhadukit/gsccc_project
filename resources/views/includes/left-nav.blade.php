@@ -16,7 +16,7 @@
             <li class="">
                 <a href="{{ route('index.deshboard') }}">
                     <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
-                    <span class="pcoded-mtext" data-i18n="nav.dash.main">Dashboard</span>
+                    <span class="pcoded-mtext" data-i18n="nav.dash.main"><?php echo trans('menus.dashboard'); ?></span>
                     <span class="pcoded-mcaret"></span>
                 </a>
             </li>
@@ -31,17 +31,17 @@
             <li class="pcoded-hasmenu ">
                 <a href="javascript:void(0)">
                     <span class="pcoded-micon"><i class="ti-direction-alt"></i><b>M</b></span>
-                    <span class="pcoded-mtext" data-i18n="nav.menu-levels.main">Translate Message</span>
+                    <span class="pcoded-mtext" data-i18n="nav.menu-levels.main"><?php echo trans('menus.menus'); ?></span>
                     <span class="pcoded-mcaret"></span>
                 </a>
 
                 <ul class="pcoded-submenu">
 
                     <li class="pcoded-hasmenu ">
-                        <a href="{{route('translate.add')}}">
+                        <a href="{{ route('translate.add') }}">
                             <span class="pcoded-micon"><i class="ti-direction-alt"></i></span>
-                            <span class="pcoded-mtext" data-i18n="nav.menu-levels.menu-level-22.main">Add 
-                                Messages
+                            <span class="pcoded-mtext"
+                                data-i18n="nav.menu-levels.menu-level-22.main"><?php echo trans('menus.list_menu'); ?>
 
                             </span>
                             <span class="pcoded-mcaret"></span>
@@ -51,8 +51,8 @@
                     <li class="pcoded-hasmenu ">
                         <a href="javascript:void(0)">
                             <span class="pcoded-micon"><i class="ti-direction-alt"></i></span>
-                            <span class="pcoded-mtext" data-i18n="nav.menu-levels.menu-level-22.main">Update 
-                                Messages
+                            <span class="pcoded-mtext"
+                                data-i18n="nav.menu-levels.menu-level-22.main"><?php echo trans('menus.add_menu'); ?>
 
                             </span>
                             <span class="pcoded-mcaret"></span>
@@ -67,7 +67,7 @@
 
         <div class="pcoded-navigatio-lavel" data-i18n="nav.category.navigation">Menus &amp; Pages</div>
         <ul class="pcoded-item pcoded-left-item">
-            
+
             {{-- <li class="active">
                 <a href="">
                     <span class="pcoded-micon"><i class="ti-layout-list-thumb-alt"></i><b>M</b></span>
@@ -78,7 +78,7 @@
             <li class="pcoded-hasmenu">
                 <a href="javascript:void(0)">
                     <span class="pcoded-micon"><i class="ti-layout-list-thumb-alt"></i></span>
-                    <span class="pcoded-mtext" data-i18n="nav.basic-components.main">Menus</span>
+                    <span class="pcoded-mtext" data-i18n="nav.basic-components.main"><?php echo trans('menus.menus'); ?></span>
                     <span class="pcoded-mcaret"></span>
                 </a>
                 <ul class="pcoded-submenu">
@@ -86,21 +86,21 @@
                     <li class="">
                         <a href="">
                             <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
-                            <span class="pcoded-mtext" data-i18n="nav.basic-components.alert">List Menu</span>
+                            <span class="pcoded-mtext" data-i18n="nav.basic-components.alert"><?php echo trans('menus.list_menu'); ?></span>
                             <span class="pcoded-mcaret"></span>
                         </a>
                     </li>
                     <li class="">
-                        <a href="{{route('menus.add')}}">
+                        <a href="{{ route('menus.add') }}">
                             <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
-                            <span class="pcoded-mtext" data-i18n="nav.basic-components.alert">Add Menu</span>
+                            <span class="pcoded-mtext" data-i18n="nav.basic-components.alert"><?php echo trans('menus.add_menu'); ?></span>
                             <span class="pcoded-mcaret"></span>
                         </a>
                     </li>
                     <li class="">
                         <a href="">
                             <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
-                            <span class="pcoded-mtext" data-i18n="nav.basic-components.alert">Update Menu</span>
+                            <span class="pcoded-mtext" data-i18n="nav.basic-components.alert"><?php echo trans('menus.update_menu'); ?></span>
                             <span class="pcoded-mcaret"></span>
                         </a>
                     </li>
@@ -118,21 +118,21 @@
             <li>
                 <a href="chart.html">
                     <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
-                    <span class="pcoded-mtext" data-i18n="nav.form-components.main">Chart</span>
+                    <span class="pcoded-mtext" data-i18n="nav.form-components.main"><?php echo trans('menus.chart'); ?></span>
                     <span class="pcoded-mcaret"></span>
                 </a>
             </li>
             <li>
                 <a href="map-google.html">
                     <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
-                    <span class="pcoded-mtext" data-i18n="nav.form-components.main">Maps</span>
+                    <span class="pcoded-mtext" data-i18n="nav.form-components.main"><?php echo trans('menus.maps'); ?></span>
                     <span class="pcoded-mcaret"></span>
                 </a>
             </li>
             <li class="pcoded-hasmenu">
                 <a href="javascript:void(0)">
                     <span class="pcoded-micon"><i class="ti-layout-grid2-alt"></i></span>
-                    <span class="pcoded-mtext" data-i18n="nav.basic-components.main">Pages</span>
+                    <span class="pcoded-mtext" data-i18n="nav.basic-components.main"><?php echo trans('menus.pages'); ?></span>
                     <span class="pcoded-mcaret"></span>
                 </a>
                 <ul class="pcoded-submenu">
