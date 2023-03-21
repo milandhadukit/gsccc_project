@@ -35,13 +35,12 @@ class StoreAdminMenu extends FormRequest
    
     {
         return [
-            'title_hi.required' => trans('menu.title'),
-            'title_hi.min' => trans('menu.title'),
-            'description_hi.required' => trans('menu.title'),
-            'title_en.reuired' => trans('menu.title'),
-            'description_en.required' => trans('menu.title'),
-            'title_gu.reuired' => trans('menu.title'),
-            'description_gu.required' => trans('menu.title'),
+            'title_hi.required' => trans('menus.title'),
+            'description_hi.required' => trans('menus.description'),
+            'title_en.required' => trans('menus.title'),
+            'description_en.required' => trans('menus.description'),
+            'title_gu.required' => trans('menus.title'),
+            'description_gu.required' => trans('menus.description'),
             
         ];
     }

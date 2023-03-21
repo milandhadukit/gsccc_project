@@ -4,7 +4,9 @@ return [
     'MESSAGE' => [
         'menus' => [
             ['key' => 'dashboard', 'text' => ["en" => "Dashboard", "gu" => "ડેશબોર્ડ", "hi" => "डैशबोर्ड"]],
-            ['key' => 'menus', 'text' => ["en" => "Menus", "gu" => "મેનુ", "hi" => "मेनू"]],
+            
+            ['key' => 'menus_main', 'text' => ["en" => "Menu", "gu" => " મેનૂ", "hi" => " मेनू  "]],
+            ['key' => 'translate_menu', 'text' => ["en" => "Treanslate Language", "gu" => "ભાષાંતર મેનૂ", "hi" => "भाषा मेनू का अनुवाद"]],
             ['key' => 'list_menu', 'text' => ["en" => "List Menu", "gu" => "સૂચિ મેનુ", "hi" => "सूची मेनू"]],
             ['key' => 'add_menu', 'text' => ["en" => "Add Menu", "gu" => "મેનુ ઉમેરો", "hi" => "मेनू जोड़ें"]],
             ['key' => 'update_menu', 'text' => ["en" => "Update Menu", "gu" => "અપડેટ મેનૂ", "hi" => "अद्यतन मेनू"]],
