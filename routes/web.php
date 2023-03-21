@@ -43,16 +43,22 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('language', [Localization::class, "lang_change"])->name('LangChange');
 
-Route::group(['middleware' => ['auth']], function () { 
+Route::group(['middleware' => ['auth']], function () {
     Route::get('add-menu', [MenusController::class,'AddMenus'])->name('menus.add');
     Route::post('store-menu', [MenusController::class,'storeMenus'])->name('menus.store');
 
     Route::get('add-translate', [TranslatorController::class,'addTranslate'])->name('translate.add');
     Route::post('store-translate', [TranslatorController::class,'storeTranslate'])->name('translate.store');
- 
-   
-   
+
+
+
 });
 
 
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('add-menu', [MenusController::class, 'AddMenus'])->name('menus.add');
+    Route::get('list-menu', [MenusController::class, 'List'])->name('menus.list');
+    Route::post('store-menu', [MenusController::class, 'storeMenus'])->name('menus.store');
 
+    Route::get('add-translate', [TranslatorController::class, 'addTranslate'])->name('translate.add');
+});

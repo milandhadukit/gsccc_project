@@ -22,17 +22,17 @@ class StoreUserRequest extends FormRequest
     public function rules()
     {
         return [
-            'title_hi' => 'required',
+            'title_hi'       => 'required',
             'description_hi' => 'required',
-            'title_en' => 'required',
+            'title_en'       => 'required',
             'description_en' => 'required',
-            'title_gu' => 'required',
+            'title_gu'       => 'required',
             'description_gu' => 'required',
         ];
     }
 
     public function messages()
-   
+
     {
         return [
             'title_hi.reuired' => trans('group.key'),
