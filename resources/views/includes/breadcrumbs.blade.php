@@ -19,7 +19,13 @@
                         </a>
                     </li>
 
+
                     <li class="breadcrumb-item"><a href="{{ URL('/dashboard') }}">dashboard
+
+                    <?php $segments = request()->segment(1);
+                    ?>
+                    <li class="breadcrumb-item"><a href="{{ route('index.deshboard') }}">dashboard
+
                         </a>
                     </li>
                     <li class="breadcrumb-item"><a href="{{ $segments }}">{{ request()->segment(1) }}

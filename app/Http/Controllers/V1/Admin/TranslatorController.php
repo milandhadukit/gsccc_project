@@ -40,10 +40,20 @@ class TranslatorController extends Controller
         }
 
     }
-    public function editTranslate()
+
+    public function listData()
     {
-        return view('Admin.edit_translate');
+        return view('Admin.List_translatedata');
     }
+
+    public function editTranslate($id)
+    {
+        $trans=Translation::find($id);
+        return view('Admin.edit_translate',compact('trans'));
+    }
+
+
+
     public function updateTranslate(Request $request)
     {
         $request->validate([
