@@ -43,20 +43,7 @@ class TranslatorController extends Controller
 
     public function listData()
     {
-        $data = Translation::latest()->paginate(10);
-        // foreach($data as $k ){
-
-        //     $val = $k['text']['en'];
-        //     $val = $k['text']['gu'];
-        //     $val = $k['text']['hi'];
-
-        //     // echo $val;
-        //     // echo "<br>";
-        //     dd($val);
-        //     // dd($k['text'][0]);
-        // }
-        // dd($data);
-        return view('Admin.List_translatedata',compact('data'));
+        return view('Admin.List_translatedata');
     }
 
     public function editTranslate($id)

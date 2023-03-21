@@ -3,8 +3,8 @@
 @section('content')
     <div class="card">
         <div class="card-header">
-            <h5>List Language</h5>
-
+            <h5>Hover table</h5>
+            <span>use class <code>table-hover</code> inside table element</span>
             <div class="card-header-right">
                 <ul class="list-unstyled card-option">
                     <li><i class="icofont icofont-simple-left "></i></li>
@@ -21,69 +21,33 @@
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th>@php echo trans('translate_view.group') @endphp</th>
-                            <th>@php echo trans('translate_view.key') @endphp</th>
-                            <th>@php echo trans('translate_view.text') @endphp</th>
-                            <th>@php echo trans('translate_view.text') @endphp</th>
-                            <th>@php echo trans('translate_view.text') @endphp</th>
-                            <th>@php echo trans('translate_view.action') @endphp</th>
-                        
+                            <th>@php echo trans('menu.list_title_table_ln') @endphp</th>
+                            <th>Last Name</th>
+                            <th>Username</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($data as $key => $item)
-                            <tr>
-                                <th scope="row">{{ $key + 1 }}</th>
-                                <td>{{ $item->group }}</td>
-                                <td>{{ $item->key }}</td>
-                                <td>{{ $item->text['en'] }} </td>
-                                <td>{{ $item->text['hi'] }}</td>
-                                <td>{{ $item->text['gu'] }} </td>
-                                <td>
-                                    <button class="btn btn-info btn-sm btn-skew">Info Button</button>
-                                    <button class="btn btn-danger btn-sm btn-skew">Danger Button</button>
-                               </td>
-
-
-                            </tr>
-
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                        </tr>
                     </tbody>
-                    @endforeach
                 </table>
-
             </div>
         </div>
     </div>
-
-    @if ($data->hasPages())
-        <nav aria-label="Page navigation example">
-            <ul class="pagination justify-content-center">
-                @if ($data->onFirstPage())
-                    <li class="page-item disabled">
-                        <a class="page-link" href="#" tabindex="-1">Previous</a>
-                    </li>
-                @else
-                    <li class="page-item"><a class="page-link" href="{{ $data->previousPageUrl() }}">
-                            Previous</a>
-                    </li>
-                @endif
-
-
-                @if ($data->hasMorePages())
-                    <li class="page-item">
-                        <a class="page-link" href="{{ $data->nextPageUrl() }}" rel="next">Next</a>
-                    </li>
-                @else
-                    <li class="page-item disabled">
-                        <a class="page-link" href="#">Next</a>
-                    </li>
-                @endif
-            </ul>
-        </nav>
-    @endif
-
-
-
-
-
 @endsection

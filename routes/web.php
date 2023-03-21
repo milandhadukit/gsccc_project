@@ -59,7 +59,6 @@ Route::group(['middleware' => ['auth']], function () {
 
 
     Route::get('deshboard', [DashboardController::class, 'indexDeshboard'])->name('index.deshboard');
-    
     /**Menu Related*/
     Route::group(['prefix' => 'menus'], function () {
         Route::get('add-menu', [MenusController::class, 'AddMenus'])->name('menus.add');
