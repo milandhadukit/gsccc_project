@@ -51,6 +51,7 @@
             window.location.href = url + "/" + $(this).val();
         });
     </script>
+    @yield('script')
 </body>
 
 </html>
