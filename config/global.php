@@ -4,7 +4,7 @@ return [
     'MESSAGE' => [
         'menus' => [
             ['key' => 'dashboard', 'text' => ["en" => "Dashboard", "gu" => "ડેશબોર્ડ", "hi" => "डैशबोर्ड"]],
-            
+
             ['key' => 'menus_main', 'text' => ["en" => "Menu", "gu" => " મેનૂ", "hi" => " मेनू  "]],
             ['key' => 'translate_menu', 'text' => ["en" => "Treanslate Language", "gu" => "ભાષાંતર મેનૂ", "hi" => "भाषा मेनू का अनुवाद"]],
             ['key' => 'list_menu', 'text' => ["en" => "List Menu", "gu" => "સૂચિ મેનુ", "hi" => "सूची मेनू"]],
@@ -19,8 +19,9 @@ return [
             ['key' => 'menu_levels', 'text' => ["en" => "Menu Levels", "gu" => "મેનુ સ્તરો", "hi" => "मेनू स्तर"]],
             ['key' => 'title', 'text' => ["en" => "Enter Title", "gu" => "શીર્ષક દાખલ કરો", "hi" => "शीर्षक दर्ज करें"]],
             ['key' => 'description', 'text' => ["en" => "Enter Description", "gu" => "વર્ણન દાખલ કરો", "hi" => "विवरण दर्ज करें"]],
+            ['key' => 'cms', 'text' => ["en" => "CMS", "gu" => "સીએમએસ", "hi" => "सीएमएस "]],
         ],
-        
-        
+
+
     ],
 ];

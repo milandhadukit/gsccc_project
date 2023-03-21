@@ -4,8 +4,7 @@
             <div class="page-header-title">
                 <i class="icofont icofont-layout bg-c-blue"></i>
                 <div class="d-inline">
-                    <h4>Animated Tooltip</h4>
-                    <span>lorem ipsum dolor sit amet, consectetur adipisicing</span>
+                    <h4><?php echo trans('menus.dashboard'); ?></h4>
                 </div>
             </div>
         </div>
@@ -17,10 +16,12 @@
                             <i class="icofont icofont-home"></i>
                         </a>
                     </li>
-                    <li class="breadcrumb-item"><a href="#!">Basic
+                    <?php $segments = request()->segment(1);
+                    ?>
+                    <li class="breadcrumb-item"><a href="{{ URL('/dashboard') }}">dashboard
                         </a>
                     </li>
-                    <li class="breadcrumb-item"><a href="#!">Animated
+                    <li class="breadcrumb-item"><a href="{{ $segments }}">{{ request()->segment(1) }}
                         </a>
                     </li>
                 </ul>
@@ -28,3 +29,27 @@
         </div>
     </div>
 </div>
+{{-- <div class="card borderless-card">
+    <div class="card-block inverse-breadcrumb">
+        <div class="breadcrumb-header">
+            <h5><?php echo trans('menus.dashboard'); ?></h5>
+        </div>
+        <div class="page-header-breadcrumb">
+            <ul class="breadcrumb-title">
+                <li class="breadcrumb-item">
+                    <a href="#!">
+                        <i class="icofont icofont-home"></i>
+                    </a>
+                </li>
+                <?php $segments = request()->segment(1);
+                ?>
+                <li class="breadcrumb-item"><a href="{{ URL('/dashboard') }}">dashboard
+                    </a>
+                </li>
+                <li class="breadcrumb-item"><a href="{{ $segments }}">{{ request()->segment(1) }}
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div> --}}

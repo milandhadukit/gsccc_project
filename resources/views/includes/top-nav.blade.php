@@ -8,9 +8,9 @@
             <a class="mobile-search morphsearch-search" href="#">
                 <i class="ti-search"></i>
             </a>
-            {{-- <a href="index.html">
+            <a href="index.html">
                 <img class="img-fluid" src="assets/images/logo.png" alt="Theme-Logo" />
-            </a> --}}
+            </a>
             <a class="mobile-options">
                 <i class="ti-more"></i>
             </a>
@@ -105,7 +105,7 @@
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                     onclick="event.preventDefault();
                                               document.getElementById('logout-form').submit();">
-                                               <i class="ti-layout-sidebar-left"></i>
+                                    <i class="ti-layout-sidebar-left"></i>
                                     {{ __('Logout') }}
                                 </a>
 
