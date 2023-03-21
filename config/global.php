@@ -20,6 +20,9 @@ return [
             ['key' => 'title', 'text' => ["en" => "Enter Title", "gu" => "શીર્ષક દાખલ કરો", "hi" => "शीर्षक दर्ज करें"]],
             ['key' => 'description', 'text' => ["en" => "Enter Description", "gu" => "વર્ણન દાખલ કરો", "hi" => "विवरण दर्ज करें"]],
             ['key' => 'cms', 'text' => ["en" => "CMS", "gu" => "સીએમએસ", "hi" => "सीएमएस "]],
+            ['key' => 'list_cms', 'text' => ["en" => "List CMS", "gu" => "સૂચિ સીએમએસ", "hi" => "सूची सीएमएस"]],
+            ['key' => 'add_cms', 'text' => ["en" => "Add CMS", "gu" => "સીએમએસ ઉમેરો", "hi" => "सीएमएस जोड़ें"]],
+            ['key' => 'update_cms', 'text' => ["en" => "Update CMS", "gu" => "અપડેટ સીએમએસ", "hi" => "अद्यतन सीएमएस"]],
         ],
 
 
