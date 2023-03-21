@@ -1,7 +1,7 @@
 <nav class="pcoded-navbar">
     <div class="sidebar_toggle"><a href="#"><i class="icon-close icons"></i></a></div>
     <div class="pcoded-inner-navbar main-menu">
-        
+
         <div class="pcoded-search">
             <span class="searchbar-toggle"> </span>
             <div class="pcoded-search-box ">
@@ -9,118 +9,109 @@
                 <span class="search-icon"><i class="ti-search" aria-hidden="true"></i></span>
             </div>
         </div>
-        <div class="pcoded-navigatio-lavel" data-i18n="nav.category.navigation">Layout & Menus</div>
+
+
+        <div class="pcoded-navigatio-lavel" data-i18n="nav.category.navigation">Dashboard</div>
         <ul class="pcoded-item pcoded-left-item">
             <li class="">
-                <a href="">
+                <a href="{{ route('index.deshboard') }}">
                     <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
                     <span class="pcoded-mtext" data-i18n="nav.dash.main">Dashboard</span>
                     <span class="pcoded-mcaret"></span>
                 </a>
             </li>
-            <li class="pcoded-hasmenu active pcoded-trigger">
+
+
+        </ul>
+
+
+
+        <div class="pcoded-navigatio-lavel" data-i18n="nav.category.other">Multi &amp; Language</div>
+        <ul class="pcoded-item pcoded-left-item">
+            <li class="pcoded-hasmenu ">
                 <a href="javascript:void(0)">
-                    <span class="pcoded-micon"><i class="ti-layout-grid2-alt"></i></span>
-                    <span class="pcoded-mtext" data-i18n="nav.basic-components.main">Components</span>
+                    <span class="pcoded-micon"><i class="ti-direction-alt"></i><b>M</b></span>
+                    <span class="pcoded-mtext" data-i18n="nav.menu-levels.main">Translate Message</span>
                     <span class="pcoded-mcaret"></span>
                 </a>
+
                 <ul class="pcoded-submenu">
-                    <li class=" ">
-                        <a href="accordion.html">
-                            <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
-                            <span class="pcoded-mtext" data-i18n="nav.basic-components.alert">Accordion</span>
+
+                    <li class="pcoded-hasmenu ">
+                        <a href="{{route('translate.add')}}">
+                            <span class="pcoded-micon"><i class="ti-direction-alt"></i></span>
+                            <span class="pcoded-mtext" data-i18n="nav.menu-levels.menu-level-22.main">Add 
+                                Messages
+
+                            </span>
                             <span class="pcoded-mcaret"></span>
                         </a>
+
                     </li>
-                    <li class=" ">
-                        <a href="breadcrumb.html">
-                            <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
-                            <span class="pcoded-mtext" data-i18n="nav.basic-components.breadcrumbs">Breadcrumbs</span>
+                    <li class="pcoded-hasmenu ">
+                        <a href="javascript:void(0)">
+                            <span class="pcoded-micon"><i class="ti-direction-alt"></i></span>
+                            <span class="pcoded-mtext" data-i18n="nav.menu-levels.menu-level-22.main">Update 
+                                Messages
+
+                            </span>
                             <span class="pcoded-mcaret"></span>
                         </a>
+
                     </li>
-                    <li class=" ">
-                        <a href="button.html">
-                            <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
-                            <span class="pcoded-mtext" data-i18n="nav.basic-components.alert">Button</span>
-                            <span class="pcoded-mcaret"></span>
-                        </a>
-                    </li>
-                    <li class=" ">
-                        <a href="tabs.html">
-                            <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
-                            <span class="pcoded-mtext" data-i18n="nav.basic-components.breadcrumbs">Tabs</span>
-                            <span class="pcoded-mcaret"></span>
-                        </a>
-                    </li>
-                    <li class=" ">
-                        <a href="color.html">
-                            <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
-                            <span class="pcoded-mtext" data-i18n="nav.basic-components.alert">Color</span>
-                            <span class="pcoded-mcaret"></span>
-                        </a>
-                    </li>
-                    <li class=" ">
-                        <a href="label-badge.html">
-                            <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
-                            <span class="pcoded-mtext" data-i18n="nav.basic-components.breadcrumbs">Label
-                                Badge</span>
-                            <span class="pcoded-mcaret"></span>
-                        </a>
-                    </li>
-                    <li class="active">
-                        <a href="tooltip.html">
-                            <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
-                            <span class="pcoded-mtext" data-i18n="nav.basic-components.alert">Tooltip</span>
-                            <span class="pcoded-mcaret"></span>
-                        </a>
-                    </li>
-                    <li class=" ">
-                        <a href="typography.html">
-                            <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
-                            <span class="pcoded-mtext" data-i18n="nav.basic-components.breadcrumbs">Typography</span>
-                            <span class="pcoded-mcaret"></span>
-                        </a>
-                    </li>
-                    <li class=" ">
-                        <a href="notification.html">
-                            <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
-                            <span class="pcoded-mtext" data-i18n="nav.basic-components.alert">Notification</span>
-                            <span class="pcoded-mcaret"></span>
-                        </a>
-                    </li>
-                    <li class=" ">
-                        <a href="icon-themify.html">
-                            <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
-                            <span class="pcoded-mtext" data-i18n="nav.basic-components.breadcrumbs">Icon</span>
-                            <span class="pcoded-mcaret"></span>
-                        </a>
-                    </li>
+
 
                 </ul>
             </li>
         </ul>
-        <div class="pcoded-navigatio-lavel" data-i18n="nav.category.forms">Forms &amp; Tables
-        </div>
-        <ul class="pcoded-item pcoded-left-item">
-            <li>
-                <a href="form-elements-component.html">
-                    <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
-                    <span class="pcoded-mtext" data-i18n="nav.form-components.main">Form
-                        Components</span>
-                    <span class="pcoded-mcaret"></span>
-                </a>
-            </li>
-            <li>
-                <a href="bs-basic-table.html">
-                    <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
-                    <span class="pcoded-mtext" data-i18n="nav.form-components.main">Basic
-                        Table</span>
-                    <span class="pcoded-mcaret"></span>
-                </a>
-            </li>
 
+        <div class="pcoded-navigatio-lavel" data-i18n="nav.category.navigation">Menus &amp; Pages</div>
+        <ul class="pcoded-item pcoded-left-item">
+            
+            {{-- <li class="active">
+                <a href="">
+                    <span class="pcoded-micon"><i class="ti-layout-list-thumb-alt"></i><b>M</b></span>
+                    <span class="pcoded-mtext" data-i18n="nav.dash.main">Menus</span>
+                    <span class="pcoded-mcaret"></span>
+                </a>
+            </li> --}}
+            <li class="pcoded-hasmenu">
+                <a href="javascript:void(0)">
+                    <span class="pcoded-micon"><i class="ti-layout-list-thumb-alt"></i></span>
+                    <span class="pcoded-mtext" data-i18n="nav.basic-components.main">Menus</span>
+                    <span class="pcoded-mcaret"></span>
+                </a>
+                <ul class="pcoded-submenu">
+
+                    <li class="">
+                        <a href="">
+                            <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                            <span class="pcoded-mtext" data-i18n="nav.basic-components.alert">List Menu</span>
+                            <span class="pcoded-mcaret"></span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="{{route('menus.add')}}">
+                            <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                            <span class="pcoded-mtext" data-i18n="nav.basic-components.alert">Add Menu</span>
+                            <span class="pcoded-mcaret"></span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="">
+                            <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                            <span class="pcoded-mtext" data-i18n="nav.basic-components.alert">Update Menu</span>
+                            <span class="pcoded-mcaret"></span>
+                        </a>
+                    </li>
+
+
+                </ul>
+            </li>
         </ul>
+
+
+
 
         <div class="pcoded-navigatio-lavel" data-i18n="nav.category.forms">Chart &amp; Maps</div>
         <ul class="pcoded-item pcoded-left-item">
@@ -221,5 +212,6 @@
                 </ul>
             </li>
         </ul>
+
     </div>
 </nav>
