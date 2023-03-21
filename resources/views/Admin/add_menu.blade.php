@@ -42,6 +42,9 @@
                                 <label for="exampleInputEmail1">Enter Title English</label>
                                 <input type="text" class="form-control" placeholder="Enter Title English"
                                     name="title_en">
+                                    @php
+                                       echo trans('menu.title');
+                                    @endphp 
                                 @error('title_en')
                                     <span class="error" style="color: red">{{ $message }}</span>
                                 @enderror

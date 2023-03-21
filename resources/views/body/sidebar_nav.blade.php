@@ -85,10 +85,10 @@
                                     <select class="form-control changeLang">
                                         <option value="en" {{ session()->get('locale') == 'en' ? 'selected' : '' }}>
                                             English</option>
-                                        <option value="fr" {{ session()->get('locale') == 'fr' ? 'selected' : '' }}>
-                                            France</option>
-                                        <option value="sp" {{ session()->get('locale') == 'sp' ? 'selected' : '' }}>
-                                            Spanish</option>
+                                        <option value="fr" {{ session()->get('locale') == 'gu' ? 'selected' : '' }}>
+                                            Gujrati</option>
+                                        <option value="sp" {{ session()->get('locale') == 'hi' ? 'selected' : '' }}>
+                                            Hindi</option>
                                     </select>
                                 </a>
                             </li>
@@ -171,12 +171,12 @@
                         </ul>
                     </li>
                 </ul>
-                <div class="pcoded-navigatio-lavel" data-i18n="nav.category.forms">Forms &amp; Tables</div>
+                <div class="pcoded-navigatio-lavel" data-i18n="nav.category.forms">Translate &amp; Language</div>
                 <ul class="pcoded-item pcoded-left-item">
                     <li>
-                        <a href="form-elements-component.html">
+                        <a href="{{route('translate.add')}}">
                             <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
-                            <span class="pcoded-mtext" data-i18n="nav.form-components.main">Form Components</span>
+                            <span class="pcoded-mtext" data-i18n="nav.form-components.main">Add Translate Message</span>
                             <span class="pcoded-mcaret"></span>
                         </a>
                     </li>

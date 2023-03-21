@@ -65,7 +65,7 @@
                                     <div class="card-block-small">
                                         <i class="icofont icofont-social-twitter bg-c-yellow card1-icon"></i>
                                         <span class="text-c-yellow f-w-600"> @php
-                                            echo trans('test1.test');
+                                             echo trans('menu.title');
                                         @endphp</span>
                                         <h4>+562</h4>
                                         <div>
