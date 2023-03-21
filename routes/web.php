@@ -27,7 +27,8 @@ Route::get('/', function () {
 Auth::routes();
 Route::get('test', function () {
     // use Spatie\TranslationLoader\LanguageLine;
-
+    app()->setLocale('hi');
+    echo trans('menu.title');
     // Translation::create([
     //    'group' => 'test',
     //    'key' => 'test',
@@ -45,8 +46,9 @@ Route::get('language', [Localization::class, "lang_change"])->name('LangChange')
 Route::group(['middleware' => ['auth']], function () { 
     Route::get('add-menu', [MenusController::class,'AddMenus'])->name('menus.add');
     Route::post('store-menu', [MenusController::class,'storeMenus'])->name('menus.store');
-    
+
     Route::get('add-translate', [TranslatorController::class,'addTranslate'])->name('translate.add');
+    Route::post('store-translate', [TranslatorController::class,'storeTranslate'])->name('translate.store');
  
    
    

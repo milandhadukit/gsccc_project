@@ -19,13 +19,20 @@ class MenusController extends Controller
         $this->middleware('auth');
     }
 
-    public function AddMenus(Request $request)
+    public function AddMenus()
     {
         return view('Admin.add_menu');
     }
 
     public function storeMenus(StoreAdminMenu $request)
     {
+        $request->validate([
+          
+            'title_en' => 'required',
+            'title_gu' => 'required',
+            'title_hi' => 'required',
+            
+        ]);
 
         try {
             $menus = new Menus();
