@@ -21,12 +21,12 @@ class MessageSeeder extends Seeder
         Translation::truncate();
 
         // /* Fetch All Sms Template Type */
+
         $messageData = config('global.MESSAGE');
-        $ter = array();
+       
         foreach ($messageData as $key => $message) {
 
-            // die;
-            //$ter[] = $key;
+           
             foreach ($message as $val) {
                 $temp = array();
                 $temp = array_merge($val, array('group' => $key));

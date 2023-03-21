@@ -31,7 +31,7 @@
             <li class="pcoded-hasmenu ">
                 <a href="javascript:void(0)">
                     <span class="pcoded-micon"><i class="ti-direction-alt"></i><b>M</b></span>
-                    <span class="pcoded-mtext" data-i18n="nav.menu-levels.main"><?php echo trans('menus.menus'); ?></span>
+                    <span class="pcoded-mtext" data-i18n="nav.menu-levels.main"><?php echo trans('menus.translate_menu'); ?></span>
                     <span class="pcoded-mcaret"></span>
                 </a>
 
@@ -60,6 +60,18 @@
 
                     </li>
 
+                    <li class="pcoded-hasmenu ">
+                        <a href="javascript:void(0)">
+                            <span class="pcoded-micon"><i class="ti-direction-alt"></i></span>
+                            <span class="pcoded-mtext"
+                                data-i18n="nav.menu-levels.menu-level-22.main"><?php echo trans('menus.update_menu'); ?>
+
+                            </span>
+                            <span class="pcoded-mcaret"></span>
+                        </a>
+
+                    </li>
+
 
                 </ul>
             </li>
@@ -78,7 +90,7 @@
             <li class="pcoded-hasmenu">
                 <a href="javascript:void(0)">
                     <span class="pcoded-micon"><i class="ti-layout-list-thumb-alt"></i></span>
-                    <span class="pcoded-mtext" data-i18n="nav.basic-components.main"><?php echo trans('menus.menus'); ?></span>
+                    <span class="pcoded-mtext" data-i18n="nav.basic-components.main"><?php echo trans('menus.menus_main'); ?></span>
                     <span class="pcoded-mcaret"></span>
                 </a>
                 <ul class="pcoded-submenu">
