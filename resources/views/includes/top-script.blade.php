@@ -9,4 +9,4 @@
 <link rel="stylesheet" type="text/css" href="{{ URL::asset('assets/icon/icofont/css/icofont.css') }}">
 <!-- Style.css -->
 <link rel="stylesheet" type="text/css" href="{{ URL::asset('assets/css/style.css') }}">
-<link rel="stylesheet" type="text/css" href="{{ URL::asset('assets/css/jquery.mCustomScrollbar.css') }}s">
+<link rel="stylesheet" type="text/css" href="{{ URL::asset('assets/css/jquery.mCustomScrollbar.css') }}">

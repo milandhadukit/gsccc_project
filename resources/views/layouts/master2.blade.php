@@ -24,9 +24,21 @@
             {{-- Include Top Nav Bar --}}
             @include('includes.top-nav')
             {{-- Include Left Nav Bar --}}
-            @include('includes.left-nav')
-            {{-- Give Content --}}
-            @yield('content')
+            <div class="pcoded-main-container">
+                <div class="pcoded-wrapper">
+                    @include('includes.left-nav')
+                    <div class="pcoded-content">
+                        <div class="pcoded-inner-content">
+                            <div class="main-body">
+                                <div class="page-wrapper">
+                                    @include('includes.breadcrumbs')
+                                    @yield('content')
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     {{-- Include Bottom Script --}}
