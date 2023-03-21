@@ -33,13 +33,7 @@ class MenusController extends Controller
 
     public function storeMenus(StoreAdminMenu $request)
     {
-        $request->validate([
-
-            'title_en' => 'required',
-            'title_gu' => 'required',
-            'title_hi' => 'required',
-
-        ]);
+       
 
         try {
             $menus = new Menus();
