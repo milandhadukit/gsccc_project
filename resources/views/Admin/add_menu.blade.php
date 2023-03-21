@@ -36,15 +36,19 @@
 
                     <div class="page-body">
 
+                        <a href="{{route('index.deshboard')}}">Back</a>
+
+
+
                         <form action="{{route('menus.store')}}" method="POST" enctype="multipart/form-data">
                           @csrf
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Enter Title English</label>
                                 <input type="text" class="form-control" placeholder="Enter Title English"
                                     name="title_en">
-                                    @php
+                                    {{-- @php
                                        echo trans('menu.title');
-                                    @endphp 
+                                    @endphp  --}}
                                 @error('title_en')
                                     <span class="error" style="color: red">{{ $message }}</span>
                                 @enderror
