@@ -67,8 +67,10 @@ Route::group(['middleware' => ['auth']], function () {
 
     /**Translate Related*/
     Route::group(['prefix' => 'translate'], function () {
-        Route::get('add-translate', [TranslatorController::class, 'addTranslate'])->name('translate.add');
-        Route::post('store-translate', [TranslatorController::class, 'storeTranslate'])->name('translate.store');
+        Route::get('list-translate', [TranslatorController::class,'listData'])->name('translate.list');
+        Route::get('add-translate', [TranslatorController::class,'addTranslate'])->name('translate.add');
+        Route::post('store-translate', [TranslatorController::class,'storeTranslate'])->name('translate.store');
+        Route::get('edit-translate/{id}', [TranslatorController::class,'editTranslate'])->name('translate.edit');
     });
 
     /**Cms Related*/
@@ -79,16 +81,7 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('/delete', [CmsController::class, 'userDelete']);
     });
 
-    Route::get('deshboard', [DashboardController::class,'indexDeshboard'])->name('index.deshboard');
-
-    Route::get('add-menu', [MenusController::class,'AddMenus'])->name('menus.add');
-    Route::post('store-menu', [MenusController::class,'storeMenus'])->name('menus.store');
-
-
-    Route::get('list-translate', [TranslatorController::class,'listData'])->name('translate.list');
-    Route::get('add-translate', [TranslatorController::class,'addTranslate'])->name('translate.add');
-    Route::post('store-translate', [TranslatorController::class,'storeTranslate'])->name('translate.store');
-    Route::get('edit-translate/{id}', [TranslatorController::class,'editTranslate'])->name('translate.edit');
+   
 
 
  
