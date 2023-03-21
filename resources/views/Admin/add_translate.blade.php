@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.master2')
 
 @section('content')
     <div class="pcoded-content">
@@ -10,7 +10,7 @@
                         {{ session()->get('message') }}
                     </div>
                   @endif
-                  
+
                 <div class="page-wrapper">
 
                     <div class="page-body">
