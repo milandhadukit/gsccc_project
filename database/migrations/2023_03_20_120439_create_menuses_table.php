@@ -20,8 +20,11 @@ return new class extends Migration
             $table->text('description_hi')->nullable();
             $table->text('description_gu')->nullable();
             $table->integer('parent_id')->default(0);
+            $table->string('slug_en')->nullable();
+            $table->string('slug_hi')->nullable();
+            $table->string('slug_gu')->nullable();
+            $table->tinyInteger('status')->default(1)->comment('(0 = inactive and 1 = active)');
             $table->string('slug')->nullable();
-            $table->enum('status', ['1', '0', '-1'])->default(1);
             $table->bigInteger('user_id')->nullable();
             $table->timestamps();
         });
