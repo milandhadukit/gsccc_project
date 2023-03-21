@@ -27,16 +27,25 @@ Route::get('/', function () {
 
 Auth::routes();
 Route::get('test', function () {
-    // use Spatie\TranslationLoader\LanguageLine;
-    app()->setLocale('hi');
-    echo trans('menu.title');
-    // Translation::create([
-    //    'group' => 'test',
-    //    'key' => 'test',
-    //    'text' => ['en' => 'This is a required field', 'sp' => 'Dit is een zzxz','fr' => 'Dit is een verplicht veld'],
-    // ]);
-    // echo "calle";
-    // echo "Cakked";
+    // Translation::updateOrCreate(
+    //     [
+    //         'group' => 'menu',
+    //         'key'   => 'list_title_table_fn',
+    //         'text'  => ['en' => 'First Name', 'gu' => 'પ્રથમ નામ', 'hi' => 'पहला नाम'],
+    //     ],
+    //     [
+    //         'group' => 'menu',
+    //         'key'   => 'list_title_table_ln',
+    //         'text'  => ['en' => 'Last Name', 'gu' => 'છેલ્લું નામ', 'hi' => 'उपनाम'],
+    //     ],
+    //     [
+    //         'group' => 'menu',
+    //         'key'   => 'list_title_table_sr',
+    //         'text'  => ['en' => 'Sr No', 'gu' => 'ક્રમ નં', 'hi' => 'क्रमांक'],
+    //     ],
+    // );
+    echo "calle";
+    echo "Cakked";
 });
 
 Route::get('lang/{lang}', [Localization::class, 'change'])->name('locale.change');
@@ -56,7 +65,11 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('store-translate', [TranslatorController::class,'storeTranslate'])->name('translate.store');
 
 
+    Route::get('add-menu', [MenusController::class, 'AddMenus'])->name('menus.add');
+    Route::post('store-menu', [MenusController::class, 'storeMenus'])->name('menus.store');
 
+    Route::get('add-translate', [TranslatorController::class, 'addTranslate'])->name('translate.add');
+    Route::post('store-translate', [TranslatorController::class, 'storeTranslate'])->name('translate.store');
 });
 
 
