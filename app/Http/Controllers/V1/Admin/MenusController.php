@@ -11,6 +11,7 @@ use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\DB;
 
 class MenusController extends Controller
 {
@@ -21,7 +22,7 @@ class MenusController extends Controller
     public function List()
     {
         // $menu = Menus::get();
-        $data = \DB::table('menuses')->get()->toArray();
+        $data = DB::table('menuses')->get()->toArray();
 
         return view('layouts.master2');
     }

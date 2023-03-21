@@ -37,6 +37,7 @@ Route::get('test', function () {
     // echo "calle";
     // echo "Cakked";
 });
+
 Route::get('lang/{lang}', [Localization::class, 'change'])->name('locale.change');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
