@@ -4,7 +4,6 @@ return [
     'MESSAGE' => [
         'menus' => [
             ['key' => 'dashboard', 'text' => ["en" => "Dashboard", "gu" => "ડેશબોર્ડ", "hi" => "डैशबोर्ड"]],
-
             ['key' => 'menus_main', 'text' => ["en" => "Menu", "gu" => " મેનૂ", "hi" => " मेनू  "]],
             ['key' => 'translate_menu', 'text' => ["en" => "Treanslate Language", "gu" => "ભાષાંતર મેનૂ", "hi" => "भाषा मेनू का अनुवाद"]],
             ['key' => 'list_menu', 'text' => ["en" => "List Menu", "gu" => "સૂચિ મેનુ", "hi" => "सूची मेनू"]],
@@ -23,6 +22,14 @@ return [
             ['key' => 'list_cms', 'text' => ["en" => "List CMS", "gu" => "સૂચિ સીએમએસ", "hi" => "सूची सीएमएस"]],
             ['key' => 'add_cms', 'text' => ["en" => "Add CMS", "gu" => "સીએમએસ ઉમેરો", "hi" => "सीएमएस जोड़ें"]],
             ['key' => 'update_cms', 'text' => ["en" => "Update CMS", "gu" => "અપડેટ સીએમએસ", "hi" => "अद्यतन सीएमएस"]],
+        ],
+
+        'translate_view' => [
+            ['key' => 'group', 'text' => ["en" => "Group", "gu" => "ગ્રુપ", "hi" => "समूह"]],
+            ['key' => 'key', 'text' => ["en" => "Key", "gu" => " કી", "hi" => " कुंजी  "]],
+            ['key' => 'text', 'text' => ["en" => " Text ", "gu" => "ટેક્સ્ટ ", "hi" => "टेक्स्ट "]],
+            ['key' => 'action', 'text' => ["en" => " Action ", "gu" => "ક્રિયા", "hi" => "कार्य "]],
+          
         ],
 
 
