@@ -15,6 +15,10 @@ return [
             ['key' => 'maps', 'text' => ["en" => "Maps", "gu" => "નકશા", "hi" => "एमएपीएस"]],
             ['key' => 'pages', 'text' => ["en" => "Pages", "gu" => "પૃષ્ઠો", "hi" => "पृष्ठों"]],
             ['key' => 'menu_levels', 'text' => ["en" => "Menu Levels", "gu" => "મેનુ સ્તરો", "hi" => "मेनू स्तर"]],
+            ['key' => 'title', 'text' => ["en" => "Enter Title", "gu" => "શીર્ષક દાખલ કરો", "hi" => "शीर्षक दर्ज करें"]],
+            ['key' => 'description', 'text' => ["en" => "Enter Description", "gu" => "વર્ણન દાખલ કરો", "hi" => "विवरण दर्ज करें"]],
         ],
+        
+        
     ],
 ];
