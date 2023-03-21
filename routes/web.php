@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\V1\Admin\CmsController;
 use App\Http\Controllers\V1\Admin\Localization;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
@@ -56,6 +57,28 @@ Route::get('language', [Localization::class, "lang_change"])->name('LangChange')
 
 Route::group(['middleware' => ['auth']], function () {
 
+
+    Route::get('deshboard', [DashboardController::class, 'indexDeshboard'])->name('index.deshboard');
+    /**Menu Related*/
+    Route::group(['prefix' => 'menus'], function () {
+        Route::get('add-menu', [MenusController::class, 'AddMenus'])->name('menus.add');
+        Route::post('store-menu', [MenusController::class, 'storeMenus'])->name('menus.store');
+    });
+
+    /**Translate Related*/
+    Route::group(['prefix' => 'translate'], function () {
+        Route::get('add-translate', [TranslatorController::class, 'addTranslate'])->name('translate.add');
+        Route::post('store-translate', [TranslatorController::class, 'storeTranslate'])->name('translate.store');
+    });
+
+    /**Cms Related*/
+    Route::group(['prefix' => 'cms'], function () {
+        Route::get('/list', [CmsController::class, 'List'])->name('cms.list');
+        Route::post('/add', [CmsController::class, 'updateProfile']);
+        Route::post('/update', [CmsController::class, 'ChangePassword']);
+        Route::get('/delete', [CmsController::class, 'userDelete']);
+    });
+
     Route::get('deshboard', [DashboardController::class,'indexDeshboard'])->name('index.deshboard');
 
     Route::get('add-menu', [MenusController::class,'AddMenus'])->name('menus.add');
@@ -69,14 +92,6 @@ Route::group(['middleware' => ['auth']], function () {
 
 
  
-   
+
 });
 
-
-Route::group(['middleware' => ['auth']], function () {
-    Route::get('add-menu', [MenusController::class, 'AddMenus'])->name('menus.add');
-    Route::get('list-menu', [MenusController::class, 'List'])->name('menus.list');
-    Route::post('store-menu', [MenusController::class, 'storeMenus'])->name('menus.store');
-
-    Route::get('add-translate', [TranslatorController::class, 'addTranslate'])->name('translate.add');
-});

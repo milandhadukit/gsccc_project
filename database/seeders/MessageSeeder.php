@@ -20,13 +20,10 @@ class MessageSeeder extends Seeder
         Schema::disableForeignKeyConstraints();
         Translation::truncate();
 
-        // /* Fetch All Sms Template Type */
-
         $messageData = config('global.MESSAGE');
-       
+
         foreach ($messageData as $key => $message) {
 
-           
             foreach ($message as $val) {
                 $temp = array();
                 $temp = array_merge($val, array('group' => $key));

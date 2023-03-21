@@ -3,8 +3,10 @@
         <div class="col-lg-8">
             <div class="page-header-title">
                 <i class="icofont icofont-layout bg-c-blue"></i>
+                <?php $segments = request()->segment(1);
+                ?>
                 <div class="d-inline">
-                    <h4><?php echo trans('menus.dashboard'); ?></h4>
+                    <h4>{{ $segments }}</h4>
                 </div>
             </div>
         </div>
@@ -16,12 +18,20 @@
                             <i class="icofont icofont-home"></i>
                         </a>
                     </li>
+
+
+                    <li class="breadcrumb-item"><a href="{{ URL('/dashboard') }}">dashboard
+
                     <?php $segments = request()->segment(1);
                     ?>
                     <li class="breadcrumb-item"><a href="{{ route('index.deshboard') }}">dashboard
+
                         </a>
                     </li>
                     <li class="breadcrumb-item"><a href="{{ $segments }}">{{ request()->segment(1) }}
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item"><a href="{{ $segments }}">{{ request()->segment(2) }}
                         </a>
                     </li>
                 </ul>
