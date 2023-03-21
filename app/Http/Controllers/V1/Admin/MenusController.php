@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\V1\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreAdminMenu;
 use App\Http\Requests\StoreUserRequest;
 use App\Models\Menus;
 use App\Models\User;
@@ -23,7 +24,7 @@ class MenusController extends Controller
         return view('Admin.add_menu');
     }
 
-    public function storeMenus(StoreUserRequest $request)
+    public function storeMenus(StoreAdminMenu $request)
     {
 
         try {

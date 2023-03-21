@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\V1\Admin\MenusController;
 use App\Models\Translation;
+use App\Models\User;
+use App\Http\Controllers\V1\Admin\TranslatorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,6 +45,9 @@ Route::get('language', [Localization::class, "lang_change"])->name('LangChange')
 Route::group(['middleware' => ['auth']], function () { 
     Route::get('add-menu', [MenusController::class,'AddMenus'])->name('menus.add');
     Route::post('store-menu', [MenusController::class,'storeMenus'])->name('menus.store');
+    
+    Route::get('add-translate', [TranslatorController::class,'addTranslate'])->name('translate.add');
+ 
    
    
 });
