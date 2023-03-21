@@ -7,6 +7,7 @@ use App\Http\Controllers\V1\Admin\MenusController;
 use App\Models\Translation;
 use App\Models\User;
 use App\Http\Controllers\V1\Admin\TranslatorController;
+use App\Http\Controllers\V1\Admin\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,6 +46,9 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('language', [Localization::class, "lang_change"])->name('LangChange');
 
 Route::group(['middleware' => ['auth']], function () {
+
+    Route::get('deshboard', [DashboardController::class,'indexDeshboard'])->name('index.deshboard');
+
     Route::get('add-menu', [MenusController::class,'AddMenus'])->name('menus.add');
     Route::post('store-menu', [MenusController::class,'storeMenus'])->name('menus.store');
 
