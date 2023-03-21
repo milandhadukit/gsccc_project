@@ -26,6 +26,7 @@
                             <th>@php echo trans('translate_view.text') @endphp</th>
                             <th>@php echo trans('translate_view.text') @endphp</th>
                             <th>@php echo trans('translate_view.text') @endphp</th>
+                            <th>@php echo trans('translate_view.action') @endphp</th>
                         
                         </tr>
                     </thead>
@@ -38,6 +39,10 @@
                                 <td>{{ $item->text['en'] }} </td>
                                 <td>{{ $item->text['hi'] }}</td>
                                 <td>{{ $item->text['gu'] }} </td>
+                                <td>
+                                    <button class="btn btn-info btn-sm btn-skew">Info Button</button>
+                                    <button class="btn btn-danger btn-sm btn-skew">Danger Button</button>
+                               </td>
 
 
                             </tr>

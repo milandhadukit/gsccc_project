@@ -25,11 +25,11 @@ return [
         ],
 
         'translate_view' => [
-            ['key' => 'group', 'text' => ["en" => "group", "gu" => "ગ્રુપ", "hi" => "समूह"]],
-            ['key' => 'key', 'text' => ["en" => "key", "gu" => " કી", "hi" => " कुंजी  "]],
-            ['key' => 'text', 'text' => ["en" => " text ", "gu" => "ટેક્સ્ટ ", "hi" => "टेक्स्ट "]],
+            ['key' => 'group', 'text' => ["en" => "Group", "gu" => "ગ્રુપ", "hi" => "समूह"]],
+            ['key' => 'key', 'text' => ["en" => "Key", "gu" => " કી", "hi" => " कुंजी  "]],
+            ['key' => 'text', 'text' => ["en" => " Text ", "gu" => "ટેક્સ્ટ ", "hi" => "टेक्स्ट "]],
+            ['key' => 'action', 'text' => ["en" => " Action ", "gu" => "ક્રિયા", "hi" => "कार्य "]],
           
-           
         ],
 
 
