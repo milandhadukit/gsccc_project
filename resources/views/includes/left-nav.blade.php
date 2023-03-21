@@ -49,7 +49,7 @@
                 <ul class="pcoded-submenu">
 
                     <li class="pcoded-hasmenu ">
-                        <a href="">
+                        <a href="{{route('translate.list')}}">
                             <span class="pcoded-micon"><i class="ti-direction-alt"></i></span>
                             <span class="pcoded-mtext"
                                 data-i18n="nav.menu-levels.menu-level-22.main"><?php echo trans('menus.list_menu'); ?>

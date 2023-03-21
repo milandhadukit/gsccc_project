@@ -61,15 +61,15 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('add-menu', [MenusController::class,'AddMenus'])->name('menus.add');
     Route::post('store-menu', [MenusController::class,'storeMenus'])->name('menus.store');
 
+
+    Route::get('list-translate', [TranslatorController::class,'listData'])->name('translate.list');
     Route::get('add-translate', [TranslatorController::class,'addTranslate'])->name('translate.add');
     Route::post('store-translate', [TranslatorController::class,'storeTranslate'])->name('translate.store');
+    Route::get('edit-translate/{id}', [TranslatorController::class,'editTranslate'])->name('translate.edit');
 
 
-    Route::get('add-menu', [MenusController::class, 'AddMenus'])->name('menus.add');
-    Route::post('store-menu', [MenusController::class, 'storeMenus'])->name('menus.store');
-
-    Route::get('add-translate', [TranslatorController::class, 'addTranslate'])->name('translate.add');
-    Route::post('store-translate', [TranslatorController::class, 'storeTranslate'])->name('translate.store');
+ 
+   
 });
 
 
