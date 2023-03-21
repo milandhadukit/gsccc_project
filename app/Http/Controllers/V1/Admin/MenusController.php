@@ -18,8 +18,14 @@ class MenusController extends Controller
     {
         $this->middleware('auth');
     }
+    public function List()
+    {
+        // $menu = Menus::get();
+        $data = \DB::table('menuses')->get()->toArray();
 
-    public function AddMenus()
+        return view('layouts.master2');
+    }
+    public function AddMenus(Request $request)
     {
         return view('Admin.add_menu');
     }
@@ -27,11 +33,11 @@ class MenusController extends Controller
     public function storeMenus(StoreAdminMenu $request)
     {
         $request->validate([
-          
+
             'title_en' => 'required',
             'title_gu' => 'required',
             'title_hi' => 'required',
-            
+
         ]);
 
         try {
@@ -46,14 +52,11 @@ class MenusController extends Controller
                 $menus->title_hi = $request->title_hi;
                 $menus->description_hi = $request->description_hi;
                 $menus->save();
-                
-                return redirect()->route('menus.add')->with('message', 'Menu Add Successfully');
 
+                return redirect()->route('menus.add')->with('message', 'Menu Add Successfully');
             }
         } catch (Exception $e) {
             return $e->getMessage();
-
         }
     }
-
 }

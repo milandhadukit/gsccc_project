@@ -106,14 +106,7 @@
         </a>
 
     </div>
-    </div>
-    </div>
-    <script type="text/javascript">
-        var url = "{{ url('lang') }}";
-        $(".changeLang").on('change', function() {
-            window.location.href = url + "/" + $(this).val();
-        });
-    </script>
+
 
 
 
