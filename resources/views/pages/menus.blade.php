@@ -21,7 +21,7 @@
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th>First Name</th>
+                            <th>@php echo trans('menu.list_title_table_ln') @endphp</th>
                             <th>Last Name</th>
                             <th>Username</th>
                         </tr>

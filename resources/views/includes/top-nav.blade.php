@@ -53,9 +53,9 @@
                             </div>
                         </li> --}}
                         <li>
-                           
+
                         </li>
-                       
+
                     </ul>
                 </li>
 
@@ -94,18 +94,18 @@
                                     <select class="form-control changeLang">
                                         <option value="en" {{ session()->get('locale') == 'en' ? 'selected' : '' }}>
                                             English</option>
-                                        <option value="fr" {{ session()->get('locale') == 'gu' ? 'selected' : '' }}>
+                                        <option value="gu" {{ session()->get('locale') == 'gu' ? 'selected' : '' }}>
                                             Gujrati</option>
-                                        <option value="sp" {{ session()->get('locale') == 'hi' ? 'selected' : '' }}>
+                                        <option value="hi" {{ session()->get('locale') == 'hi' ? 'selected' : '' }}>
                                             Hindi</option>
                                     </select>
                                 </a>
                             </li>
-                            <li>    
+                            <li>
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                     onclick="event.preventDefault();
                                               document.getElementById('logout-form').submit();">
-                                               <i class="ti-layout-sidebar-left"></i> 
+                                               <i class="ti-layout-sidebar-left"></i>
                                     {{ __('Logout') }}
                                 </a>
 
@@ -114,7 +114,7 @@
                                 </form>
                             </li>
                         </ul>
-                        
+
                     </ul>
                 </li>
             </ul>

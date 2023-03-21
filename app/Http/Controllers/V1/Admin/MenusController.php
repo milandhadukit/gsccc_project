@@ -24,7 +24,7 @@ class MenusController extends Controller
         // $menu = Menus::get();
         $data = DB::table('menuses')->get()->toArray();
 
-        return view('layouts.master2');
+        return view('pages.menus');
     }
     public function AddMenus(Request $request)
     {
