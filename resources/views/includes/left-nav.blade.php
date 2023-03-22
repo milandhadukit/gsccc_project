@@ -10,6 +10,7 @@
             </div>
         </div>
 
+    
 
         <div class="pcoded-navigatio-lavel" data-i18n="nav.category.navigation">Dashboard</div>
         <ul class="pcoded-item pcoded-left-item">
@@ -65,7 +66,6 @@
                             </span>
                             <span class="pcoded-mcaret"></span>
                         </a>
-
                     </li>
 
 
@@ -107,7 +107,7 @@
 
                     </li>
 
-                    <li class="pcoded-hasmenu ">
+                    {{-- <li class="pcoded-hasmenu ">
                         <a href="javascript:void(0)">
                             <span class="pcoded-micon"><i class="ti-direction-alt"></i></span>
                             <span class="pcoded-mtext"
@@ -117,7 +117,7 @@
                             <span class="pcoded-mcaret"></span>
                         </a>
 
-                    </li>
+                    </li> --}}
 
 
                 </ul>
@@ -137,35 +137,66 @@
             <li class="pcoded-hasmenu">
                 <a href="javascript:void(0)">
                     <span class="pcoded-micon"><i class="ti-layout-list-thumb-alt"></i></span>
-                    <span class="pcoded-mtext" data-i18n="nav.basic-components.main"><?php echo trans('menus.menus_main'); ?></span>
+                    <span class="pcoded-mtext" data-i18n="nav.basic-components.main">Home</span>
                     <span class="pcoded-mcaret"></span>
                 </a>
                 <ul class="pcoded-submenu">
 
-                    <li class="">
+                    {{-- <li class="">
                         <a href="">
                             <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
                             <span class="pcoded-mtext"
                                 data-i18n="nav.basic-components.alert"><?php echo trans('menus.list_menu'); ?></span>
                             <span class="pcoded-mcaret"></span>
                         </a>
-                    </li>
-                    <li class="">
+                    </li> --}}
+                    {{-- <li class="">
                         <a href="{{ route('menus.add') }}">
                             <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
                             <span class="pcoded-mtext"
                                 data-i18n="nav.basic-components.alert"><?php echo trans('menus.add_menu'); ?></span>
                             <span class="pcoded-mcaret"></span>
                         </a>
-                    </li>
-                    <li class="">
+                    </li> --}}
+                    {{-- <li class="">
                         <a href="">
                             <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
                             <span class="pcoded-mtext"
                                 data-i18n="nav.basic-components.alert"><?php echo trans('menus.update_menu'); ?></span>
                             <span class="pcoded-mcaret"></span>
                         </a>
+                    </li> --}}
+                    
+
+                    <li class="">
+                        <a href="{{route('home.list')}}">
+                            <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                            <span class="pcoded-mtext"
+                                data-i18n="nav.basic-components.alert">Slider</span>
+                            <span class="pcoded-mcaret"></span>
+                        </a>
                     </li>
+
+                    <li class="">
+                        <a href="">
+                            <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                            <span class="pcoded-mtext"
+                                data-i18n="nav.basic-components.alert">Home About</span>
+                            <span class="pcoded-mcaret"></span>
+                        </a>
+                    </li>
+
+                    <li class="">
+                        <a href="">
+                            <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                            <span class="pcoded-mtext"
+                                data-i18n="nav.basic-components.alert">Films / Videos</span>
+                            <span class="pcoded-mcaret"></span>
+                        </a>
+                    </li>
+
+
+
 
 
                 </ul>
