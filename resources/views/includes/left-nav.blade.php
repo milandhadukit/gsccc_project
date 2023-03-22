@@ -65,7 +65,6 @@
                             </span>
                             <span class="pcoded-mcaret"></span>
                         </a>
-
                     </li>
 
 
@@ -107,7 +106,7 @@
 
                     </li>
 
-                    <li class="pcoded-hasmenu ">
+                    {{-- <li class="pcoded-hasmenu ">
                         <a href="javascript:void(0)">
                             <span class="pcoded-micon"><i class="ti-direction-alt"></i></span>
                             <span class="pcoded-mtext"
@@ -117,7 +116,7 @@
                             <span class="pcoded-mcaret"></span>
                         </a>
 
-                    </li>
+                    </li> --}}
 
 
                 </ul>
@@ -158,14 +157,14 @@
                             <span class="pcoded-mcaret"></span>
                         </a>
                     </li>
-                    <li class="">
+                    {{-- <li class="">
                         <a href="">
                             <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
                             <span class="pcoded-mtext"
                                 data-i18n="nav.basic-components.alert"><?php echo trans('menus.update_menu'); ?></span>
                             <span class="pcoded-mcaret"></span>
                         </a>
-                    </li>
+                    </li> --}}
 
 
                 </ul>

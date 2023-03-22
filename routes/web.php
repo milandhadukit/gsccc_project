@@ -72,6 +72,8 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('add-translate', [TranslatorController::class,'addTranslate'])->name('translate.add');
         Route::post('store-translate', [TranslatorController::class,'storeTranslate'])->name('translate.store');
         Route::get('edit-translate/{id}', [TranslatorController::class,'editTranslate'])->name('translate.edit');
+        Route::post('update-translate/{id}', [TranslatorController::class,'updateTranslate'])->name('translate.update');
+        Route::get('delete-translate/{id}', [TranslatorController::class,'deleteTranslate'])->name('translate.delete');
     });
 
     /**Cms Related*/

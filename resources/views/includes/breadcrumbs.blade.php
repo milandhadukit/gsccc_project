@@ -6,7 +6,7 @@
                 <?php $segments = request()->segment(1);
                 ?>
                 <div class="d-inline">
-                    <h4>{{ $segments }}</h4>
+                    <h4>{{ $segments }} </h4>
                 </div>
             </div>
         </div>
@@ -20,7 +20,9 @@
                     </li>
 
 
-                    <li class="breadcrumb-item"><a href="{{ URL('/deshboard') }}">dashboard
+                    <li class="breadcrumb-item"><a href="{{ URL('/deshboard') }}"> @php
+                        echo trans('menus.dashboard');
+                    @endphp
 
                     <?php $segments = request()->segment(1);
                     ?>

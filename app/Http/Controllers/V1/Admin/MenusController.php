@@ -32,24 +32,54 @@ class MenusController extends Controller
     }
 
     public function storeMenus(StoreAdminMenu $request)
-    {
-       
+    {   
+        
+      
 
         try {
             $menus = new Menus();
-            $slug = $menus->slug = $request->title_hi;
+            $slugEn = $menus->slug_en = $request->title_en;
+            $slugHi= $menus->slug_hi = $request->title_hi;
+            $slugGu = $menus->slug_gu = $request->title_gu;
             $num = Str::random(1);
-            $uniqueSlugHi = Menus::where('title_hi', $slug)->count();
-            if ($uniqueSlugHi > 0) {
-                $slug = Str::slug($slug . '-' . $num);
+            $uniqueSlugEn = Menus::where('title_en', $slugEn)->count();
+
+
+            $countData = DB::table('menuses')
+            ->where('title_en', $slugEn)
+            ->orWhere('title_gu', $slugGu)
+            ->orWhere('title_hi', $slugHi)
+            ->select(
+                DB::raw('count(title_en) as titleEnglish'),
+                DB::raw('count(title_gu) as titleGujrati'),
+                DB::raw('count(title_hi) as titleHindi'),
+            )
+            ->get()
+            ->toArray();
+
+
+                return [$countData['0']->titleEnglish,$countData['0']->titleGujrati,$countData['0']->titleHindi];
+              
+
+            if ($uniqueSlugEn > 0) {
+                $slugEn = Str::slug($slugEn . '-' . $num);
+            }
 
                 $menus->user_id = auth()->user()->id;
                 $menus->title_hi = $request->title_hi;
+                $menus->title_en = $request->title_en;
+                $menus->title_gu = $request->title_gu;
                 $menus->description_hi = $request->description_hi;
+                $menus->description_en = $request->description_en;
+                $menus->description_gu = $request->description_gu;
+                $menus->slug_en=str::slug($slugEn);
+                $menus->slug_hi=str::slug($slugHi);
+                $menus->slug_gu=str::slug($slugGu);
+                dd($menus);
                 $menus->save();
 
                 return redirect()->route('menus.add')->with('message', 'Menu Add Successfully');
-            }
+            
         } catch (Exception $e) {
             return $e->getMessage();
         }
