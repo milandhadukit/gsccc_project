@@ -39,7 +39,9 @@
                         
 
                         <a href="{{route('index.deshboard')}}">Back</a>
-                        <form action="{{route('menus.store')}}" method="POST" enctype="multipart/form-data">
+
+
+                        <form action="{{route('sub.menus.store')}}" method="POST" enctype="multipart/form-data">
                           @csrf
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Enter Title English</label>

@@ -22,12 +22,7 @@ class StoreAdminMenu extends FormRequest
     public function rules(): array
     {
         return [
-            'title_hi' => 'required|min:3',
-            'description_hi' => 'required',
-            'title_en' => 'required',
-            'description_en' => 'required',
-            'title_gu' => 'required',
-            'description_gu' => 'required',
+            
           
         ];
     }
@@ -35,12 +30,7 @@ class StoreAdminMenu extends FormRequest
    
     {
         return [
-            'title_hi.required' => trans('menus.title'),
-            'description_hi.required' => trans('menus.description'),
-            'title_en.required' => trans('menus.title'),
-            'description_en.required' => trans('menus.description'),
-            'title_gu.required' => trans('menus.title'),
-            'description_gu.required' => trans('menus.description'),
+           
             
         ];
     }
