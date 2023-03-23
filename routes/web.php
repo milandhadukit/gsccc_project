@@ -88,6 +88,9 @@ Route::group(['middleware' => ['auth']], function () {
             Route::get('/homepage', [HomePageController::class, 'sliderIndex'])->name('home.list');
             Route::get('/slider-add', [HomePageController::class, 'sliderAdd'])->name('slider.add');
             Route::post('/slider-store', [HomePageController::class, 'sliderStore'])->name('slider.store');
+            Route::get('/slider-edit/{id}', [HomePageController::class, 'editSlider'])->name('slider.edit');
+            Route::post('/slider-update/{id}', [HomePageController::class, 'updateSlider'])->name('slider.update');
+            Route::get('/slider-delete/{id}', [HomePageController::class, 'deleteSlider'])->name('slider.delete');
 
         });
 
