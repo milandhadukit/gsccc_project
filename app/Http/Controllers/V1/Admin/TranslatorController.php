@@ -34,7 +34,7 @@ class TranslatorController extends Controller
             $message = ["en" => $request->text_en, "hi" => $request->text_hi, "gu" => $request->text_gu];
             $translate->text = $message;
             $translate->save();
-            return redirect()->route('translate.add')->with('message', 'Translate Add Successfully');
+            return redirect()->route('translate.list')->with('message', 'Translate Add Successfully');
         } catch (Exception $e) {
             return $e->getMessage();
         }
@@ -43,7 +43,7 @@ class TranslatorController extends Controller
 
     public function listData()
     {
-        $data = Translation::latest()->paginate(10);
+        $data = Translation::paginate(10);
         // foreach($data as $k ){
 
         //     $val = $k['text']['en'];
@@ -61,13 +61,13 @@ class TranslatorController extends Controller
 
     public function editTranslate($id)
     {
-        $trans=Translation::find($id);
-        return view('Admin.edit_translate',compact('trans'));
+        $translateUpdate=Translation::find($id);
+        return view('Admin.edit_translate',compact('translateUpdate'));
     }
 
 
 
-    public function updateTranslate(Request $request)
+    public function updateTranslate(Request $request,$id)
     {
         $request->validate([
             'group' => 'required',
@@ -78,16 +78,28 @@ class TranslatorController extends Controller
             
         ]);
         try {
-            $translate = new Translation();
+            $translate =  Translation::find($id);
             $translate->group = $request->group;
             $translate->key = $request->key;
             $message = ["en" => $request->text_en, "hi" => $request->text_hi, "gu" => $request->text_gu];
             $translate->text = $message;
             $translate->save();
-            return redirect()->route('translate.add')->with('message', 'Translate Update Successfully');
+            return redirect()->route('translate.list')->with('message', 'Translate Update Successfully');
         } catch (Exception $e) {
             return $e->getMessage();
         }
 
+    }
+    public function deleteTranslate($id)
+    {
+        try{
+            $data=Translation::find($id);
+            $data->delete();
+            return redirect()->route('translate.list')->with('message', 'Delete Successfully');
+        }
+        catch(Exception $e)
+        {
+            return $e->getMessage();
+        }
     }
 }

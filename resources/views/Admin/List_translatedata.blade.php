@@ -14,6 +14,13 @@
                     <li><i class="icofont icofont-error close-card"></i></li>
                 </ul>
             </div>
+
+            @if (session()->has('message'))
+            <div class="alert alert-success">
+                {{ session()->get('message') }}
+            </div>
+        @endif
+
         </div>
         <div class="card-block table-border-style">
             <div class="table-responsive">
@@ -40,13 +47,11 @@
                                 <td>{{ $item->text['hi'] }}</td>
                                 <td>{{ $item->text['gu'] }} </td>
                                 <td>
-                                    <button class="btn btn-info btn-sm btn-skew">Info Button</button>
-                                    <button class="btn btn-danger btn-sm btn-skew">Danger Button</button>
+                                    <a href="{{route('translate.edit',$item->id)}}" class="btn btn-info btn-sm btn-skew">Update</a>
+                                    <a href="{{route('translate.delete',$item->id)}}" class="btn btn-danger btn-sm btn-skew" id="delete">Delete</a>
+                                  
                                </td>
-
-
                             </tr>
-
                     </tbody>
                     @endforeach
                 </table>
