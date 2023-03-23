@@ -82,6 +82,7 @@ Route::group(['middleware' => ['auth']], function () {
         Route::post('/add', [CmsController::class, 'updateProfile']);
         Route::post('/update', [CmsController::class, 'ChangePassword']);
         Route::get('/delete', [CmsController::class, 'userDelete']);
+    });
 
         /**home cms Related*/
         Route::group(['prefix' => 'home'], function () {
@@ -92,7 +93,10 @@ Route::group(['middleware' => ['auth']], function () {
             Route::post('/slider-update/{id}', [HomePageController::class, 'updateSlider'])->name('slider.update');
             Route::get('/slider-delete/{id}', [HomePageController::class, 'deleteSlider'])->name('slider.delete');
 
-        });
+            Route::get('/homeabout-page', [HomePageController::class, 'homeAboutPage'])->name('homeabout.page');
+            Route::post('/homeabout', [HomePageController::class, 'homeAbout'])->name('homeabout');
+
+       
 
     });
 
