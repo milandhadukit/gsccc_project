@@ -38,6 +38,7 @@
                            <th>Content Hindi</th>
                            <th>Content Gujrati</th>
                            <th>Images</th>
+                           <th>Action</th>
                         
                         </tr>
                     </thead>
@@ -48,10 +49,11 @@
                                 <td>{{ $item->content_en }}</td>
                                 <td>{{ $item->content_hi }}</td>
                                 <td>{{ $item->content_gu }}</td>
+                                <td><img src="{{asset('slider/'.$item->image)}}" alt="Slider " height="150px" width="200px"></td>
                            
                                 <td>
-                                    {{-- <a href="{{route('translate.edit',$item->id)}}" class="btn btn-info btn-sm btn-skew">Update</a> --}}
-                                    {{-- <a href="{{route('translate.delete',$item->id)}}" class="btn btn-danger btn-sm btn-skew" id="delete">Delete</a> --}}
+                                    <a href="{{route('slider.edit',$item->id)}}" class="btn btn-info btn-sm btn-skew">Update</a>
+                                    <a href="{{route('slider.delete',$item->id)}}" class="btn btn-danger btn-sm btn-skew" id="delete">Delete</a>
                                   
                                </td>
                             </tr>
