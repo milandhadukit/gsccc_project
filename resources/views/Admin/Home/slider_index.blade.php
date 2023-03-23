@@ -8,7 +8,7 @@
         align-items: center;">
             
            
-            <h4>Slider</h4>
+            <h4><?php echo trans('pages.slider'); ?></h4>
 
             <a href="{{route('slider.add')}}" class="btn btn-outline-success" > Add</a>
             <div class="card-header-right">
@@ -34,9 +34,9 @@
                     <thead>
                         <tr>
                             <th>#</th>
-                           <th>Content English</th>
-                           <th>Content Hindi</th>
-                           <th>Content Gujrati</th>
+                           <th><?php echo trans('content.contents').'&nbsp'.trans('language.english'); ?> </th>
+                           <th><?php echo trans('content.contents').'&nbsp'.trans('language.hindi'); ?></th>
+                           <th><?php echo  trans('content.contents').'&nbsp'.trans('language.gujrati'); ?></th>
                            <th>Images</th>
                            <th>Action</th>
                         
