@@ -137,7 +137,7 @@
             <li class="pcoded-hasmenu">
                 <a href="javascript:void(0)">
                     <span class="pcoded-micon"><i class="ti-layout-list-thumb-alt"></i></span>
-                    <span class="pcoded-mtext" data-i18n="nav.basic-components.main">Home</span>
+                    <span class="pcoded-mtext" data-i18n="nav.basic-components.main"><?php echo trans('pages.home'); ?></span>
                     <span class="pcoded-mcaret"></span>
                 </a>
                 <ul class="pcoded-submenu">
@@ -172,7 +172,7 @@
                         <a href="{{route('home.list')}}">
                             <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
                             <span class="pcoded-mtext"
-                                data-i18n="nav.basic-components.alert">Slider</span>
+                                data-i18n="nav.basic-components.alert"><?php echo trans('pages.slider'); ?></span>
                             <span class="pcoded-mcaret"></span>
                         </a>
                     </li>
@@ -181,7 +181,7 @@
                         <a href="{{route('homeabout.page')}}">
                             <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
                             <span class="pcoded-mtext"
-                                data-i18n="nav.basic-components.alert">Home About</span>
+                                data-i18n="nav.basic-components.alert"><?php echo trans('pages.about_home'); ?></span>
                             <span class="pcoded-mcaret"></span>
                         </a>
                     </li>
@@ -190,7 +190,7 @@
                         <a href="{{route('filmvideo.index')}}">
                             <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
                             <span class="pcoded-mtext"
-                                data-i18n="nav.basic-components.alert">Films / Videos</span>
+                                data-i18n="nav.basic-components.alert"><?php echo trans('pages.image_video'); ?></span>
                             <span class="pcoded-mcaret"></span>
                         </a>
                     </li>

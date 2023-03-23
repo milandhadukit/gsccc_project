@@ -16,7 +16,10 @@ class MessageSeeder extends Seeder
      * @return void
      */
     public function run()
-    {
+    {   
+        // php artisan db:seed --class=MessageSeeder
+
+
         Schema::disableForeignKeyConstraints();
         Translation::truncate();
 
