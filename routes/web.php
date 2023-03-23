@@ -9,6 +9,9 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\V1\Admin\HomePageController;
 
+use App\Model\Cms;
+use Illuminate\Support\Facades\DB;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,25 +29,10 @@ Route::get('/', function () {
 
 Auth::routes();
 Route::get('test', function () {
-    // Translation::updateOrCreate(
-    //     [
-    //         'group' => 'menu',
-    //         'key'   => 'list_title_table_fn',
-    //         'text'  => ['en' => 'First Name', 'gu' => 'પ્રથમ નામ', 'hi' => 'पहला नाम'],
-    //     ],
-    //     [
-    //         'group' => 'menu',
-    //         'key'   => 'list_title_table_ln',
-    //         'text'  => ['en' => 'Last Name', 'gu' => 'છેલ્લું નામ', 'hi' => 'उपनाम'],
-    //     ],
-    //     [
-    //         'group' => 'menu',
-    //         'key'   => 'list_title_table_sr',
-    //         'text'  => ['en' => 'Sr No', 'gu' => 'ક્રમ નં', 'hi' => 'क्रमांक'],
-    //     ],
-    // );
-    echo "calle";
-    echo "Cakked";
+    $data = \DB::table('sliders')->get();
+    return view('pages.cms', compact('data'));
+    // echo "calle";
+    // echo "Cakked";
 });
 
 Route::get('lang/{lang}', [Localization::class, 'change'])->name('locale.change');
@@ -63,7 +51,6 @@ Route::group(['middleware' => ['auth']], function () {
 
         Route::get('add-sub-menu', [MenusController::class, 'addSubMenu'])->name('sub.menus.add');
         Route::post('store-sub-menu', [MenusController::class, 'storeSubMenus'])->name('sub.menus.store');
-
     });
 
     /**Translate Related*/
@@ -103,8 +90,8 @@ Route::group(['middleware' => ['auth']], function () {
             Route::post('/film-update/{id}', [HomePageController::class, 'updateImageVideo'])->name('filmvideo.update');
             Route::get('/film-delete/{id}', [HomePageController::class, 'deleteImageVideo'])->name('filmvideo.delete');
 
-       
 
+
+        });
     });
-
 });
