@@ -25,7 +25,7 @@ class TranslatorController extends Controller
             'text_en' => 'required',
             'text_gu' => 'required',
             'text_hi' => 'required',
-            
+
         ]);
         try {
             $translate = new Translation();
@@ -75,7 +75,7 @@ class TranslatorController extends Controller
             'text_en' => 'required',
             'text_gu' => 'required',
             'text_hi' => 'required',
-            
+
         ]);
         try {
             $translate =  Translation::find($id);
