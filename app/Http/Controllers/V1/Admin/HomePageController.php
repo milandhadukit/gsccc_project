@@ -242,8 +242,5 @@ class HomePageController extends Controller
         return redirect()->route('filmvideo.index')->with('message', 'Delete Successfully..');
     }
 
-    
-
-
-    
+      
 }

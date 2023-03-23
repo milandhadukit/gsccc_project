@@ -22,6 +22,7 @@ return [
             ['key' => 'list_cms', 'text' => ["en" => "List CMS", "gu" => "સૂચિ સીએમએસ", "hi" => "सूची सीएमएस"]],
             ['key' => 'add_cms', 'text' => ["en" => "Add CMS", "gu" => "સીએમએસ ઉમેરો", "hi" => "सीएमएस जोड़ें"]],
             ['key' => 'update_cms', 'text' => ["en" => "Update CMS", "gu" => "અપડેટ સીએમએસ", "hi" => "अद्यतन सीएमएस"]],
+
         ],
 
         'translate_view' => [
@@ -30,6 +31,28 @@ return [
             ['key' => 'text', 'text' => ["en" => " Text ", "gu" => "ટેક્સ્ટ ", "hi" => "टेक्स्ट "]],
             ['key' => 'action', 'text' => ["en" => " Action ", "gu" => "ક્રિયા", "hi" => "कार्य "]],
           
+        ],
+
+        'pages'=>[
+            ['key' => 'home', 'text' => ["en" => "Home", "gu" => "ઘર", "hi" => "घर"]],
+            ['key' => 'slider', 'text' => ["en" => "Slider", "gu" => "સ્લાઇડર", "hi" => "स्लाइडर"]],
+            ['key' => 'about_home', 'text' => ["en" => "About Home", "gu" => "ઘર વિશે", "hi" => "घर के बारे में"]],
+            ['key' => 'image_video', 'text' => ["en" => "Film Image/Video", "gu" => "ફિલ્મ ઇમેજ/વિડિયો", "hi" => "फिल्म छवि / वीडियो"]],
+        ],
+
+        'language'=>[
+            ['key' => 'english', 'text' => ["en" => "English", "gu" => "અંગ્રેજી", "hi" => "अंग्रेजी"]],
+            ['key' => 'hindi', 'text' => ["en" => "Hindi", "gu" => "હિન્દી", "hi" => "हिंदी"]],
+            ['key' => 'gujrati', 'text' => ["en" => "Gujrati", "gu" => "ગુજરાતી", "hi" => "गुजराती"]],
+           
+        ],
+
+        'content'=>[
+            ['key' => 'enter', 'text' => ["en" => "Enter", "gu" => "દાખલ કરો", "hi" => "प्रवेश करना"]],
+            ['key' => 'contents', 'text' => ["en" => "Content", "gu" => "સામગ્રી", "hi" => "सामग्री"]],
+            ['key' => 'introduction', 'text' => ["en" => "Introduction", "gu" => "પરિચય", "hi" => "परिचय"]],
+            ['key' => 'objective', 'text' => ["en" => "Objective", "gu" => "હેતુ", "hi" => "उद्देश्य"]],
+           
         ],
 
 

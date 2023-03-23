@@ -2,15 +2,13 @@
 
 use App\Http\Controllers\V1\Admin\CmsController;
 use App\Http\Controllers\V1\Admin\DashboardController;
+use App\Http\Controllers\V1\Admin\HomePageController;
 use App\Http\Controllers\V1\Admin\Localization;
 use App\Http\Controllers\V1\Admin\MenusController;
 use App\Http\Controllers\V1\Admin\TranslatorController;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\V1\Admin\HomePageController;
-
-use App\Model\Cms;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,7 +27,7 @@ Route::get('/', function () {
 
 Auth::routes();
 Route::get('test', function () {
-    $data = \DB::table('sliders')->get();
+    $data = DB::table('sliders')->get();
     return view('pages.cms', compact('data'));
     // echo "calle";
     // echo "Cakked";
@@ -71,27 +69,26 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('/delete', [CmsController::class, 'userDelete']);
     });
 
-        /**home cms Related*/
-        Route::group(['prefix' => 'home'], function () {
-            Route::get('/homepage', [HomePageController::class, 'sliderIndex'])->name('home.list');
-            Route::get('/slider-add', [HomePageController::class, 'sliderAdd'])->name('slider.add');
-            Route::post('/slider-store', [HomePageController::class, 'sliderStore'])->name('slider.store');
-            Route::get('/slider-edit/{id}', [HomePageController::class, 'editSlider'])->name('slider.edit');
-            Route::post('/slider-update/{id}', [HomePageController::class, 'updateSlider'])->name('slider.update');
-            Route::get('/slider-delete/{id}', [HomePageController::class, 'deleteSlider'])->name('slider.delete');
+    /**home cms Related*/
+    Route::group(['prefix' => 'home'], function () {
+        Route::get('/homepage', [HomePageController::class, 'sliderIndex'])->name('home.list');
+        Route::get('/slider-add', [HomePageController::class, 'sliderAdd'])->name('slider.add');
+        Route::post('/slider-store', [HomePageController::class, 'sliderStore'])->name('slider.store');
+        Route::get('/slider-edit/{id}', [HomePageController::class, 'editSlider'])->name('slider.edit');
+        Route::post('/slider-update/{id}', [HomePageController::class, 'updateSlider'])->name('slider.update');
+        Route::get('/slider-delete/{id}', [HomePageController::class, 'deleteSlider'])->name('slider.delete');
 
-            Route::get('/homeabout-page', [HomePageController::class, 'homeAboutPage'])->name('homeabout.page');
-            Route::post('/homeabout', [HomePageController::class, 'homeAbout'])->name('homeabout');
+        Route::get('/homeabout-page', [HomePageController::class, 'homeAboutPage'])->name('homeabout.page');
+        Route::post('/homeabout', [HomePageController::class, 'homeAbout'])->name('homeabout');
 
-            Route::get('/film-index', [HomePageController::class, 'indexImageVideo'])->name('filmvideo.index');
-            Route::get('/film-video', [HomePageController::class, 'addImageVideo'])->name('filmvideo.add');
-            Route::post('/film-video', [HomePageController::class, 'storeImageVideo'])->name('filmvideo.store');
-            Route::get('/film-edit/{id}', [HomePageController::class, 'editImageVideo'])->name('filmvideo.edit');
-            Route::post('/film-update/{id}', [HomePageController::class, 'updateImageVideo'])->name('filmvideo.update');
-            Route::get('/film-delete/{id}', [HomePageController::class, 'deleteImageVideo'])->name('filmvideo.delete');
+        Route::get('/film-index', [HomePageController::class, 'indexImageVideo'])->name('filmvideo.index');
+        Route::get('/film-video', [HomePageController::class, 'addImageVideo'])->name('filmvideo.add');
+        Route::post('/film-video', [HomePageController::class, 'storeImageVideo'])->name('filmvideo.store');
+        Route::get('/film-edit/{id}', [HomePageController::class, 'editImageVideo'])->name('filmvideo.edit');
+        Route::post('/film-update/{id}', [HomePageController::class, 'updateImageVideo'])->name('filmvideo.update');
+        Route::get('/film-delete/{id}', [HomePageController::class, 'deleteImageVideo'])->name('filmvideo.delete');
 
-
-
-        });
     });
+
+    
 });
