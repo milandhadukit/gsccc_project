@@ -96,6 +96,13 @@ Route::group(['middleware' => ['auth']], function () {
             Route::get('/homeabout-page', [HomePageController::class, 'homeAboutPage'])->name('homeabout.page');
             Route::post('/homeabout', [HomePageController::class, 'homeAbout'])->name('homeabout');
 
+            Route::get('/film-index', [HomePageController::class, 'indexImageVideo'])->name('filmvideo.index');
+            Route::get('/film-video', [HomePageController::class, 'addImageVideo'])->name('filmvideo.add');
+            Route::post('/film-video', [HomePageController::class, 'storeImageVideo'])->name('filmvideo.store');
+            Route::get('/film-edit/{id}', [HomePageController::class, 'editImageVideo'])->name('filmvideo.edit');
+            Route::post('/film-update/{id}', [HomePageController::class, 'updateImageVideo'])->name('filmvideo.update');
+            Route::get('/film-delete/{id}', [HomePageController::class, 'deleteImageVideo'])->name('filmvideo.delete');
+
        
 
     });

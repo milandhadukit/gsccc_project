@@ -4,11 +4,11 @@ namespace App\Http\Controllers\V1\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\HomeAbout;
+use App\Models\ImageVideo;
 use App\Models\Slider;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
-use Illuminate\Support\Facades\Auth;
 
 class HomePageController extends Controller
 {
@@ -110,6 +110,7 @@ class HomePageController extends Controller
         return view('Admin.Home.homeAbout', compact('data'));
     }
 
+    
 
     public function homeAbout(Request $request)
     {
@@ -129,17 +130,15 @@ class HomePageController extends Controller
             'objective_hi' => 'required|min:3',
             'objective_gu' => 'required|min:3',
 
-
         ]);
         try {
 
-            
             $imageName = time() . '.' . $request->image->extension();
             $request->image->move(public_path('home_about'), $imageName);
 
             $homeAbout = HomeAbout::updateOrCreate(
 
-                ['status'   => '1'],
+                ['status' => '1'],
                 [
                     'content_en' => $request->content_en,
                     'content_hi' => $request->content_hi,
@@ -157,27 +156,94 @@ class HomePageController extends Controller
 
                 ]
             );
-        
+
             return redirect()->route('homeabout.page')->with('message', ' Successfully..');
 
         } catch (Exception $e) {
             return $e->getMessage();
         }
-
+    }
+    public function indexImageVideo()
+    {
+        $data = ImageVideo::all();
+        return view('Admin.Home.ImageVideo_index', compact('data'));
     }
 
+    public function addImageVideo()
+    {
+        return view('Admin.Home.addImageVideo');
+    }
+
+    public function storeImageVideo(Request $request)
+    {
+        $request->validate([
+
+            "video_link" => "required|url",
+            'image' => 'required|mimes:png,jpg,jpeg||max:2048',
+
+        ]);
+        try {
+           
+            $media= new ImageVideo();
+            $imageName = time() . '.' . $request->image->extension();
+            $request->image->move(public_path('Home_Images'), $imageName);
+            $media->image=$imageName;
+            $media->video_link=$request->video_link;
+            $media->save();
+
+            return redirect()->route('filmvideo.index')->with('message', 'Add Successfully..');
+        } catch (Exception $e) {
+            return $e->getMessage();
+        }
+    }
+
+    public function editImageVideo($id)
+    {   
+        $data=ImageVideo::find($id);
+        return view('Admin.Home.edit_imagevideo',compact('data'));
+
+    }
+    public function updateImageVideo(Request $request,$id)
+    {
+        $request->validate([
+
+            "video_link" => "required|url",
+            'image' => 'required|mimes:png,jpg,jpeg||max:2048',
+
+        ]);
+        try {
+           
+            $data=  ImageVideo::find($id);
+            $path = public_path('Home_Images/' . $data->image);
+
+        if (File::exists($path)) {
+            unlink($path);
+        }
+            $imageName = time() . '.' . $request->image->extension();
+            $request->image->move(public_path('Home_Images'), $imageName);
+            $data->image=$imageName;
+            $data->video_link=$request->video_link;
+            $data->save();
+
+            return redirect()->route('filmvideo.index')->with('message', 'update Successfully..');
+        } catch (Exception $e) {
+            return $e->getMessage();
+        }
+    }
+    public  function deleteImageVideo($id)
+    {
+        $data=ImageVideo::find($id);
+        $path = public_path('Home_Images/' . $data->image);
+
+        if (File::exists($path)) {
+            unlink($path);
+        }
+        $data->delete();
+        return redirect()->route('filmvideo.index')->with('message', 'Delete Successfully..');
+    }
+
+    
 
 
-
-
-
-
-
-
-
-
-
-
-
-   
+    
 }
