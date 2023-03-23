@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\HomeAbout;
 use App\Models\ImageVideo;
 use App\Models\Slider;
+use App\Models\LatestPodcast;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
@@ -242,5 +243,47 @@ class HomePageController extends Controller
         return redirect()->route('filmvideo.index')->with('message', 'Delete Successfully..');
     }
 
+
+    public function indexProdcast()
+    {
+        $data=LatestPodcast::all();
+        return view('Admin.Home.index_prodcast',compact('data'));
+    }
+    public function addProdcast()
+    {
+       
+        return view('Admin.Home.add_prodcast');
+    }
+    public function storeProdcast(Request $request)
+    {
+        $request->validate([
+
+            "music" => "required|mimes:mp3",
+            'image' => 'required|mimes:png,jpg,jpeg||max:2048',
+            'content_en'=>'required|min:3',
+            'content_hi'=>'required|min:3',
+            'content_gu'=>'required|min:3',
+
+        ]);
+        try {
+           
+            $data= new ImageVideo();
+            $imageName = time() . '.' . $request->image->extension();
+            $request->image->move(public_path('Home_Images'), $imageName);
+            $data->image=$imageName;
+            $data->music=$request->music;
+            $data->content_en=$request->content_en;
+            $data->content_hi=$request->content_hi;
+            $data->content_gu=$request->content_gu;
+
+
+            $data->save();
+
+            return redirect()->route('prodcast.index')->with('message', 'Add Successfully..');
+        } catch (Exception $e) {
+            return $e->getMessage();
+        }
+       
+    }
       
 }

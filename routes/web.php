@@ -88,7 +88,10 @@ Route::group(['middleware' => ['auth']], function () {
         Route::post('/film-update/{id}', [HomePageController::class, 'updateImageVideo'])->name('filmvideo.update');
         Route::get('/film-delete/{id}', [HomePageController::class, 'deleteImageVideo'])->name('filmvideo.delete');
 
+        Route::get('/prodcast-index', [HomePageController::class, 'indexProdcast'])->name('prodcast.index');
+        Route::get('/prodcast-add', [HomePageController::class, 'addProdcast'])->name('prodcast.add');
+       
     });
 
-    
+
 });
