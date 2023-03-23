@@ -178,7 +178,7 @@
                     </li>
 
                     <li class="">
-                        <a href="">
+                        <a href="{{route('homeabout.page')}}">
                             <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
                             <span class="pcoded-mtext"
                                 data-i18n="nav.basic-components.alert">Home About</span>
@@ -187,7 +187,7 @@
                     </li>
 
                     <li class="">
-                        <a href="">
+                        <a href="{{route('filmvideo.index')}}">
                             <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
                             <span class="pcoded-mtext"
                                 data-i18n="nav.basic-components.alert">Films / Videos</span>
