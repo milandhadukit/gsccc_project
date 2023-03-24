@@ -8,9 +8,11 @@
         align-items: center;">
             
            
-            <h4>Latest Prodcast </h4>
+            <h4>Latest Prodcast </h4>&nbsp;&nbsp;   
 
-            <a href="{{route('prodcast.add')}}" class="btn btn-outline-success" > Add</a>
+            <a href="{{route('prodcast.add')}}" class="btn btn-outline-success" > Add</a>&nbsp;&nbsp;   
+
+            <a href="{{route('prodcast.imageadd')}}" class="btn btn-outline-success" > Prodcast Image</a>
             <div class="card-header-right">
                 <ul class="list-unstyled card-option">
                     <li><i class="icofont icofont-simple-left "></i></li>
@@ -36,7 +38,12 @@
                             <th>#</th>
                           
                            <th>Images</th>
-                           <th>Links</th>
+                           <th>Music</th>
+                           <th>Date </th>
+                           <th>content English</th>
+                           <th>content Hindi</th>
+                           <th>content Gujrati</th>
+
                            <th>Action</th>
                         
                         </tr>
@@ -46,14 +53,18 @@
                             <tr>
                                 <th scope="row">{{ $key + 1 }}</th>
                                
-                                <td><img src="{{asset('Home_Images/'.$item->image)}}" alt="Slider " height="150px" width="200px"></td>
+                                <td><img src="{{asset('prodcast_image/'.$item->image)}}" alt="Image " height="100px" width="150px"></td>
                                 <td>
-                                    <a href="{{$item->video_link}}">{{$item->video_link}}</a>
+                                    <a href="{{$item->music}}" class="btn btn-out-dashed btn-primary btn-square">Play</a>
                                     
                                 </td>
-                           
+                          
+                           <td>{{$item->date}}</td>
+                           <td>{{$item->content_en}}</td>
+                           <td>{{$item->content_hi}}</td>
+                           <td>{{$item->content_gu}}</td>
                                 <td>
-                                    <a href="{{route('filmvideo.edit',$item->id)}}" class="btn btn-info btn-sm btn-skew">Update</a>
+                                    <a href="{{route('prodcast.imageedit',$item->id)}}" class="btn btn-info btn-sm btn-skew">Update</a>
                                     <a href="{{route('filmvideo.delete',$item->id)}}" class="btn btn-danger btn-sm btn-skew" id="delete">Delete</a>
                                   
                                </td>

@@ -13,29 +13,21 @@
                 <div class="row">
                     <div class="page-wrapper">
                         <div class="page-body">
-                            <form action="{{ route('filmvideo.update',$data->id) }}" method="POST" enctype="multipart/form-data">
+                            <form action="{{ route('prodcast.imagestore') }}" method="POST" enctype="multipart/form-data">
                                 @csrf
 
 
 
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Select Image </label>
-                                    <input type="file" class="form-control" name="image" value="{{$data->image}}">
+                                    <input type="file" class="form-control" name="image">
                                     @error('image')
                                         <span class="error" style="color: red">{{ $message }}</span>
                                     @enderror
 
                                 </div>
 
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">Enter Video Link </label>
-                                    <input type="text" class="form-control" placeholder="Enter Video Link"
-                                        name="video_link" value="{{$data->video_link}}">
-                                    @error('video_link')
-                                        <span class="error" style="color: red">{{ $message }}</span>
-                                    @enderror
-
-                                </div>
+                               
 
 
 

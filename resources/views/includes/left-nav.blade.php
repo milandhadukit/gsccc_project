@@ -124,6 +124,10 @@
             </li>
         </ul>
 
+
+  
+        
+
         <div class="pcoded-navigatio-lavel" data-i18n="nav.category.navigation">Menus &amp; Pages</div>
         <ul class="pcoded-item pcoded-left-item">
 
@@ -167,6 +171,7 @@
                         </a>
                     </li> --}}
                     
+
 
                     <li class="">
                         <a href="{{route('home.list')}}">

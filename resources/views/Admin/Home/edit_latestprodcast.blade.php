@@ -13,14 +13,14 @@
                 <div class="row">
                     <div class="page-wrapper">
                         <div class="page-body">
-                            <form action="{{ route('prodcast.store') }}" method="POST" enctype="multipart/form-data">
+                            <form action="{{ route('prodcast.imageupdate',$data->id) }}" method="POST" enctype="multipart/form-data">
                                 @csrf
 
 
 
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Select Image </label>
-                                    <input type="file" class="form-control" name="image">
+                                    <input type="file" class="form-control" name="image" value="{{$data->image}}">
                                     @error('image')
                                         <span class="error" style="color: red">{{ $message }}</span>
                                     @enderror
@@ -30,7 +30,7 @@
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Enter Music </label>
                                     <input type="file" class="form-control" placeholder="Enter Video Link"
-                                        name="music">
+                                        name="music" value="{{$data->music}}">
                                     @error('music')
                                         <span class="error" style="color: red">{{ $message }}</span>
                                     @enderror
@@ -40,7 +40,7 @@
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Enter Content English </label>
                                     <input type="text" class="form-control" placeholder="Enter Content "
-                                        name="content_en">
+                                        name="content_en" value="{{$data->content_en}}">
                                     @error('content_en')
                                         <span class="error" style="color: red">{{ $message }}</span>
                                     @enderror
@@ -50,7 +50,7 @@
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Enter Content Hindi </label>
                                     <input type="text" class="form-control" placeholder="Enter Content "
-                                        name="content_hi">
+                                        name="content_hi" value="{{$data->content_hi}}">
                                     @error('content_hi')
                                         <span class="error" style="color: red">{{ $message }}</span>
                                     @enderror
@@ -60,7 +60,7 @@
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Enter Content Gujrati </label>
                                     <input type="text" class="form-control" placeholder="Enter Content "
-                                        name="content_gu">
+                                        name="content_gu" value="{{$data->content_gu}}">
                                     @error('content_gu')
                                         <span class="error" style="color: red">{{ $message }}</span>
                                     @enderror
@@ -69,7 +69,7 @@
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Select Date </label>
                                     <input type="date" class="form-control" placeholder="Select Date "
-                                        name="date">
+                                        name="date" value="{{$data->date}}">
                                     @error('date')
                                         <span class="error" style="color: red">{{ $message }}</span>
                                     @enderror
@@ -78,9 +78,6 @@
 
                                 <button type="submit" class="btn btn-primary">Submit</button>
                             </form>
-
-
-
 
 
                         </div>

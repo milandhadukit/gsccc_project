@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('image')->nullable();
             $table->string('date')->nullable();
+            $table->string('music')->nullable();    
             $table->string('content_en')->nullable();
             $table->string('content_hi')->nullable();
             $table->string('content_gu')->nullable();

@@ -90,7 +90,13 @@ Route::group(['middleware' => ['auth']], function () {
 
         Route::get('/prodcast-index', [HomePageController::class, 'indexProdcast'])->name('prodcast.index');
         Route::get('/prodcast-add', [HomePageController::class, 'addProdcast'])->name('prodcast.add');
-       
+        Route::post('/prodcast-store', [HomePageController::class, 'storeProdcast'])->name('prodcast.store');
+        Route::get('/prodcast-imageadd', [HomePageController::class, 'prodcastImage'])->name('prodcast.imageadd');
+        Route::post('/prodcast-imagestore', [HomePageController::class, 'prodcastImageManage'])->name('prodcast.imagestore');
+        Route::get('/prodcast-imageedit/{id}', [HomePageController::class, 'editLatestProdcast'])->name('prodcast.imageedit');
+        Route::post('/prodcast-imageupdate/{id}', [HomePageController::class, 'updateLatestProdcast'])->name('prodcast.imageupdate');
+        Route::get('/prodcast-imagedelete/{id}', [HomePageController::class, 'deleteLatestProdcast'])->name('prodcast.imagedelete');
+
     });
 
 

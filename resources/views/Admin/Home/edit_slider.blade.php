@@ -49,7 +49,7 @@
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Select Image </label>
                                     <input type="file" class="form-control" placeholder="Enter Title Gujrati"
-                                        name="image">
+                                        name="image" value="{{$slider->image}}">
                                     @error('image')
                                         <span class="error" style="color: red">{{ $message }}</span>
                                     @enderror
