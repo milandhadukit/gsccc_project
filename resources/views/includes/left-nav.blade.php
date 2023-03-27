@@ -130,48 +130,14 @@
 
         <div class="pcoded-navigatio-lavel" data-i18n="nav.category.navigation">Menus &amp; Pages</div>
         <ul class="pcoded-item pcoded-left-item">
-
-            {{-- <li class="active">
-                <a href="">
-                    <span class="pcoded-micon"><i class="ti-layout-list-thumb-alt"></i><b>M</b></span>
-                    <span class="pcoded-mtext" data-i18n="nav.dash.main">Menus</span>
-                    <span class="pcoded-mcaret"></span>
-                </a>
-            </li> --}}
             <li class="pcoded-hasmenu">
                 <a href="javascript:void(0)">
                     <span class="pcoded-micon"><i class="ti-layout-list-thumb-alt"></i></span>
                     <span class="pcoded-mtext" data-i18n="nav.basic-components.main"><?php echo trans('pages.home'); ?></span>
                     <span class="pcoded-mcaret"></span>
                 </a>
+
                 <ul class="pcoded-submenu">
-
-                    {{-- <li class="">
-                        <a href="">
-                            <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
-                            <span class="pcoded-mtext"
-                                data-i18n="nav.basic-components.alert"><?php echo trans('menus.list_menu'); ?></span>
-                            <span class="pcoded-mcaret"></span>
-                        </a>
-                    </li> --}}
-                    {{-- <li class="">
-                        <a href="{{ route('menus.add') }}">
-                            <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
-                            <span class="pcoded-mtext"
-                                data-i18n="nav.basic-components.alert"><?php echo trans('menus.add_menu'); ?></span>
-                            <span class="pcoded-mcaret"></span>
-                        </a>
-                    </li> --}}
-                    {{-- <li class="">
-                        <a href="">
-                            <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
-                            <span class="pcoded-mtext"
-                                data-i18n="nav.basic-components.alert"><?php echo trans('menus.update_menu'); ?></span>
-                            <span class="pcoded-mcaret"></span>
-                        </a>
-                    </li> --}}
-                    
-
 
                     <li class="">
                         <a href="{{route('home.list')}}">
@@ -215,7 +181,99 @@
 
                 </ul>
             </li>
+
+
         </ul>
+
+
+
+        {{-- <ul class="pcoded-item pcoded-left-item">
+            
+
+            <li class="pcoded-hasmenu">
+                <a href="{{route('about-list')}}">
+                    <span class="pcoded-micon"><i class="ti-layout-grid2-alt"></i></span>
+                    <span class="pcoded-mtext" data-i18n="nav.basic-components.main">About Gsccc</span>
+                    <span class="pcoded-mcaret"></span>
+                </a>
+            </li>
+
+        </ul> --}}
+
+
+
+        <ul class="pcoded-item pcoded-left-item">
+            <li class="pcoded-hasmenu">
+                <a href="javascript:void(0)">
+                    <span class="pcoded-micon"><i class="ti-layout-grid2-alt"></i></span>
+                    <span class="pcoded-mtext" data-i18n="nav.basic-components.main">About Gsccc</span>
+                    <span class="pcoded-mcaret"></span>
+                </a>
+
+                <ul class="pcoded-submenu">
+
+                    <li class="">
+                        <a href="{{route('about-list')}}">
+                            <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                            <span class="pcoded-mtext"
+                                data-i18n="nav.basic-components.alert">Pages</span>
+                            <span class="pcoded-mcaret"></span>
+                        </a>
+                    </li>
+
+                    <li class="">
+                        <a href="{{route('about.list.team')}}">
+                            <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                            <span class="pcoded-mtext"
+                                data-i18n="nav.basic-components.alert">Team</span>
+                            <span class="pcoded-mcaret"></span>
+                        </a>
+                    </li>
+
+                
+
+                    
+                  
+
+
+
+
+                </ul>
+            </li>
+
+
+        </ul>   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <div class="pcoded-navigatio-lavel" data-i18n="nav.category.forms">Chart &amp; Maps</div>
         <ul class="pcoded-item pcoded-left-item">
             <li>

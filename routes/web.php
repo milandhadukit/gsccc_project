@@ -6,6 +6,8 @@ use App\Http\Controllers\V1\Admin\HomePageController;
 use App\Http\Controllers\V1\Admin\Localization;
 use App\Http\Controllers\V1\Admin\MenusController;
 use App\Http\Controllers\V1\Admin\TranslatorController;
+use App\Http\Controllers\V1\Admin\AboutGscccController;
+use App\Http\Controllers\V1\Admin\TeamAboutGscccController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
@@ -98,6 +100,19 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('/prodcast-imagedelete/{id}', [HomePageController::class, 'deleteLatestProdcast'])->name('prodcast.imagedelete');
 
     });
-
+    Route::group(['prefix' => 'About-Gsccc'], function () {
+        Route::get('/about-list', [AboutGscccController::class, 'listPages'])->name('about-list');
+        Route::get('/about-add', [AboutGscccController::class, 'addPages'])->name('about-add');
+        Route::post('/about-store', [AboutGscccController::class, 'storePages'])->name('about-store');
+        Route::get('/about-edit/{id}', [AboutGscccController::class, 'editPages'])->name('about-edit');
+        Route::post('/about-update/{id}', [AboutGscccController::class, 'updatePages'])->name('about-update');
+        Route::get('/about-delete/{id}', [AboutGscccController::class, 'deletePage'])->name('about-delete');
+       
+        Route::get('/about-list-team', [TeamAboutGscccController::class, 'listTeam'])->name('about.list.team');
+        Route::get('/about-team-add', [TeamAboutGscccController::class, 'addTeam'])->name('about.team.add');
+        Route::post('/about-team-store', [TeamAboutGscccController::class, 'storeTeam'])->name('about.team.store');
+       
+    });
 
 });
+    
