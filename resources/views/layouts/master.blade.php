@@ -24,25 +24,27 @@
     <link href="{{ URL::asset('assets/css/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
 
     <!-- themify-icons line icon -->
-
+    {{-- <link rel="stylesheet" type="text/css" href="assets/icon/themify-icons/themify-icons.css"> --}}
     <link href="{{ URL::asset('assets/icon/themify-icons/themify-icons.css') }}" rel="stylesheet" type="text/css" />
 
     <!-- ico font -->
-
+    {{-- <link rel="stylesheet" type="text/css" href="assets/icon/icofont/css/icofont.css"> --}}
     <link href="{{ URL::asset('assets/icon/icofont/css/icofont.css') }}" rel="stylesheet" type="text/css" />
     <!-- Style.css -->
-
+    {{-- <link rel="stylesheet" type="text/css" href="assets/css/style.css"> --}}
     <link href="{{ URL::asset('assets/css/style.css') }}" rel="stylesheet" type="text/css" />
 
     <link href="{{ URL::asset('assets/css/jquery.mCustomScrollbar.css') }}" rel="stylesheet" type="text/css" />
-
-
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
     {{-- <link href="{{ URL::asset('assets/css/style.css'); }}" rel="stylesheet" />
       <script src="{{ asset('assets/plugins/jquery-1.10.2.js')}}"></script> --}}
     <title>gsccc</title>
 </head>
 
 <body>
+    {{-- <body> --}}
+
 
     <div id="pcoded" class="pcoded">
         <div class="pcoded-overlay-box"></div>
@@ -50,6 +52,11 @@
 
             @include('body.sidebar_nav')
             @yield('content')
+            {{-- @include('pages.Deshboard') --}}
+
+
+
+
 
             <!-- Pre-loader start -->
             <div class="theme-loader">
@@ -93,55 +100,92 @@
 
         </div>
     </div>
+    <div class="fixed-button">
+        <a href="https://codedthemes.com/item/guru-able-admin-template/" target="_blank" class="btn btn-md btn-primary">
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i> Upgrade To Pro
+        </a>
 
     </div>
-    </div>
-    <script type="text/javascript">
-        var url = "{{ route('LangChange') }}";
-        $(".changeLang").on("change", function() {
-            alert($(this).val());
-            window.location.href = url + "?lang=" + $(this).val();
-        });
-    </script>
-
-    <!-- Required Jquery -->
-    <script type="text/javascript" src="assets/js/jquery-ui/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="assets/js/jquery/jquery.min.js"></script>
-    <script type="text/javascript" src="assets/js/popper.js/popper.min.js"></script>
-    <script type="text/javascript" src="assets/js/bootstrap/js/bootstrap.min.js"></script>
-
-    <!-- jquery slimscroll js -->
-    <script type="text/javascript" src="assets/js/jquery-slimscroll/jquery.slimscroll.js"></script>
-    <!-- modernizr js -->
-    <script type="text/javascript" src="assets/js/modernizr/modernizr.js"></script>
-    <!-- am chart -->
-    <script src="assets/pages/widget/amchart/amcharts.min.js"></script>
-    <script src="assets/pages/widget/amchart/serial.min.js"></script>
-    <!-- Todo js -->
-    <script type="text/javascript " src="assets/pages/todo/todo.js "></script>
-    <!-- Custom js -->
-    <script type="text/javascript" src="assets/pages/dashboard/custom-dashboard.js"></script>
-    <script type="text/javascript" src="assets/js/script.js"></script>
-    <script type="text/javascript " src="assets/js/SmoothScroll.js"></script>
-
-    <script src="assets/js/pcoded.min.js"></script>
-    <script src="assets/js/demo-12.js"></script>
-    <script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
 
 
-    <script>
-        var $window = $(window);
-        var nav = $('.fixed-button');
-        $window.scroll(function() {
-            if ($window.scrollTop() >= 200) {
-                nav.addClass('active');
-            } else {
-                nav.removeClass('active');
-            }
-        });
-    </script>
 
 
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Required Jquery -->
+<script type="text/javascript" src="assets/js/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery-ui/jquery-ui.min.js"></script>
+<script type="text/javascript" src="assets/js/popper.js/popper.min.js"></script>
+<script type="text/javascript" src="assets/js/bootstrap/js/bootstrap.min.js"></script>
+<!-- jquery slimscroll js -->
+<script type="text/javascript" src="assets/js/jquery-slimscroll/jquery.slimscroll.js"></script>
+<!-- modernizr js -->
+<script type="text/javascript" src="assets/js/modernizr/modernizr.js"></script>
+<!-- am chart -->
+<script src="assets/pages/widget/amchart/amcharts.min.js"></script>
+<script src="assets/pages/widget/amchart/serial.min.js"></script>
+<!-- Todo js -->
+<script type="text/javascript " src="assets/pages/todo/todo.js "></script>
+<!-- Custom js -->
+<script type="text/javascript" src="assets/pages/dashboard/custom-dashboard.js"></script>
+<script type="text/javascript" src="assets/js/script.js"></script>
+<script type="text/javascript " src="assets/js/SmoothScroll.js"></script>
+
+<script src="assets/js/pcoded.min.js"></script>
+<script src="assets/js/demo-12.js"></script>
+<script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+
+
+<!-- summer note editor -->
+
+
+
+
+<script>
+    var $window = $(window);
+    var nav = $('.fixed-button');
+    $window.scroll(function() {
+        if ($window.scrollTop() >= 200) {
+            nav.addClass('active');
+        } else {
+            nav.removeClass('active');
+        }
+    });
+</script>
+
+
+
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.summernote').summernote();
+    });
+</script>
 
 </body>
 

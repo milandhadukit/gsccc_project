@@ -3,10 +3,12 @@
 namespace App\Http\Middleware;
 
 use Closure;
-use Illuminate\Http\Request;
-use Symfony\Component\HttpFoundation\Response;
+use Carbon\Carbon;
 
-class Locale
+/**
+ * Class LocaleMiddleware.
+ */
+class LocaleMiddleware
 {
     /**
      * Handle an incoming request.
@@ -17,7 +19,11 @@ class Locale
      */
     public function handle($request, Closure $next)
     {
-        //$raw_locale = Session::get('locale');
-        App::setLocale($locale);
+        if (session()->has('locale')) {
+            $locale = session()->get('locale');
+            app()->setLocale($locale);
+        }
+
+        return $next($request);
     }
 }
